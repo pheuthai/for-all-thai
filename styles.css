@@ -230,3 +230,9 @@ button, input {
     background: url(https://www.peoplepowerparty.kr/assets/home/img/partycon2024/main-4-bg.png) no-repeat center;
     background-size: cover;
 }
+
+@media (max-width: 520px) {
+    .msec1 .candi-list li .top span {
+        font-size: 1.8rem;
+    }
+}
