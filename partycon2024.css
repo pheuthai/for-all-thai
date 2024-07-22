@@ -302,14 +302,14 @@ aside#pc-aside .aside_conts > ul > li > p a {display:inline-block; padding-top:1
     justify-content:space-between;
 }
 .msec1 .candi-list li .top div h4 {
-    font-size: 2rem;
+    font-size: 1rem;
     color: #000;
     font-weight: 900;
     margin-block-start: .5em;
     margin-block-end: .5em;
 }
 .msec1 .candi-list li .top div em {  
-    font-size:2rem;
+    font-size:.8rem;
     color:#000;
     font-weight:400;
 }
@@ -465,7 +465,7 @@ aside#pc-aside .aside_conts > ul > li > p a {display:inline-block; padding-top:1
         font-size:1.6rem;
     }
     .msec1 .candi-list li .top div h4 {  
-        font-size:2.8rem;
+        font-size:1rem;
     }
     .msec1 .candi-list li .top div em {
         font-size:1.6rem;
