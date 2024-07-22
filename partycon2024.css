@@ -280,7 +280,7 @@ aside#pc-aside .aside_conts > ul > li > p a {display:inline-block; padding-top:1
     background-size:cover;
 }
 .msec1 .candi-list li:nth-child(4) {
-    background:url(https://www.peoplepowerparty.kr/assets/home/img/partycon2024/main-4-bg.png) no-repeat center;
+    background: linear-gradient(300deg, #f8ffc9, #ffebeb, transparent);
     background-size:cover;
 }
 .msec1 .candi-list li .top {   
@@ -2155,4 +2155,7 @@ aside#pt-aside .aside_conts > ul > li > p a {display:inline-block; padding-top:1
 @media (max-width: 800px) {
     .pc-vote .img.for_mobile {display:block;}
     .pc-vote .img.for_pc {display:none;}
+}
+.msec1 .candi-list li a.no-border::after{
+    border: none;
 }
