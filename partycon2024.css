@@ -331,6 +331,7 @@ aside#pc-aside .aside_conts > ul > li > p a {display:inline-block; padding-top:1
     z-index:3;
     background: rgb(255,255,255);
     background: linear-gradient(180deg, rgba(184,37,50,0) 50%, rgba(46,41,79,1) 100%, rgba(46,41,79,1) 100%);
+    text-decoration: none;
 }
 .msec1 .candi-list li a::after {
     display:block;
@@ -349,7 +350,7 @@ aside#pc-aside .aside_conts > ul > li > p a {display:inline-block; padding-top:1
 .msec1 .candi-list li a h5 {
     margin-top:auto;
     text-align:center;
-    font-size:3.6rem;
+    font-size:1rem;
     color:#fff;
     font-weight:800;;
 }
@@ -450,10 +451,10 @@ aside#pc-aside .aside_conts > ul > li > p a {display:inline-block; padding-top:1
         font-size:1.8rem;
     }
     .msec1 .candi-list li .top div h4 {  
-        font-size:3.8rem;
+        font-size:1rem;
     }
     .msec1 .candi-list li .top div em {
-        font-size:1.8rem;
+        font-size:1rem;
     }
     .tit-top .mtit {    
         font-size:4rem;
