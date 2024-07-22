@@ -2159,3 +2159,6 @@ aside#pt-aside .aside_conts > ul > li > p a {display:inline-block; padding-top:1
 .msec1 .candi-list li a.no-border::after{
     border: none;
 }
+.msec1 .candi-list li a.no-border{
+	background: transparent;
+}
