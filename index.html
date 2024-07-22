@@ -23,6 +23,11 @@
     
     <style>
 
+@media (min-width: 768px) {
+    .md\:grid-cols-2 {
+        grid-template-columns: repeat(3, minmax(0, 1fr))!important;
+    }
+}
 .mb-6 {
     margin-bottom: 1.5rem;
     font-family: "IBM Plex Sans Thai", sans-serif !important;
