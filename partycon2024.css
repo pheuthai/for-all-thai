@@ -1,0 +1,2155 @@
+@font-face {
+    font-family: 'NanumSquareNeo-Variable';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+	font-family: 'NanumSquareNeo';
+	font-weight: 900;
+	font-display: swap;
+	src: local('NanumSquareNeo Black'), url('/assets/home/font/woff2/NanumSquareNeoTTF-eHv.woff2') format('woff2'), url('/assets/home/font/woff/NanumSquareNeoTTF-eHv.woff') format('woff');
+}
+@font-face {
+	font-family: 'NanumSquareNeo';
+	font-weight: 800;
+	font-display: swap;
+	src: local('NanumSquareNeo ExtraBold'), url('/assets/home/font/woff2/NanumSquareNeoTTF-dEb.woff2') format('woff2'), url('/assets/home/font/woff/NanumSquareNeoTTF-dEb.woff') format('woff');
+}
+@font-face {
+	font-family: 'NanumSquareNeo';
+	font-weight: 700;
+	font-display: swap;
+	src: local('NanumSquareNeo Bold'), url('/assets/home/font/woff2/NanumSquareNeoTTF-cBd.woff2') format('woff2'), url('/assets/home/font/woff/NanumSquareNeoTTF-cBd.woff') format('woff');
+}
+@font-face {
+	font-family: 'NanumSquareNeo';
+	font-weight: 400;
+	font-display: swap;
+	src: local('NanumSquareNeo Regular'), url('/assets/home/font/woff2/NanumSquareNeoTTF-bRg.woff2') format('woff2'), url('/assets/home/font/woff/NanumSquareNeoTTF-bRg.woff') format('woff');
+}
+@font-face {
+	font-family: 'NanumSquareNeo';
+	font-weight: 300;
+	font-display: swap;
+	src: local('NanumSquareNeo Light'), url('/assets/home/font/woff2/NanumSquareNeoTTF-aLt.woff2') format('woff2'), url('/assets/home/font/woff/NanumSquareNeoTTF-aLt.woff') format('woff');
+}
+
+body {
+    font-family: 'Pretendard', sans-serif;
+    overflow-x:hidden;
+}
+
+.body-hidden {
+    overflow-y:hidden;
+}
+
+
+/* header */
+.pc-header {
+    padding:0 4%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    height:8rem;
+    background:#fff;
+}
+.pc-header .logo img {
+    width:13.3rem;
+    height:auto;
+}
+.pc-header .nav {
+    display:flex;
+    align-items:center;
+    gap:5rem;
+}
+.pc-header .nav li > a {
+    display:block;
+    line-height:4.1rem;
+    font-size:2rem;
+    font-weight:800;
+    color:#000;
+}
+.pc-header .nav li > a:hover {
+    color:#d31421;
+}
+
+/* 서브메뉴 */
+.pc-header .nav > li {
+    position:relative;
+}
+.pc-header .nav > li > p {
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    width:100%;
+    z-index: 10;        
+}
+.pc-header .nav > li:hover p {
+    display:block;
+}
+.pc-header .nav > li > p a {
+    display:block;
+    white-space:nowrap;
+    width:24rem;
+    height:4.5rem;
+    line-height:4.5rem;
+    text-align:center;
+    font-size:1.8rem;
+    color:#fff;
+    background:#d31421;
+    border-radius:1rem;
+}
+
+.pc-header .dday {
+    font-family: 'NanumSquareNeo';
+    font-size:1.4rem;
+    font-weight:800;
+    color:#d31421;
+    display:flex;
+    padding:0 1.2rem;
+    height:3.2rem;
+    line-height:1;
+    align-items:center;
+    /* border:solid 1px #ccc;
+    background:#f5f5f5;
+    border-radius:0.8rem; */
+}
+
+.pc-header .right {
+    display:flex;
+    align-items:center;
+    gap:2rem;
+}
+.pc-header .right .slogan img {
+    width:7.2rem;
+    height:auto;
+}
+.pc-header .category {
+    display:none;
+}
+
+.pc-header .category {
+    font-size:0;
+    width:2.8rem;
+    height:2.8rem;
+    background:url("../img/partycon2024/category.svg") no-repeat center;
+    background-size:2.8rem auto;
+}
+
+@media all and (max-width:1200px) {
+    .pc-header .nav {
+        display:none;
+    }
+    .pc-header .category {
+        display:block;
+    }
+}
+
+
+/** aside */
+.body-fixed {overflow-y:hidden; position:fixed; width:100%;}
+aside#pc-aside {
+    background:#fff; position:fixed; top:0; left:100%; transition:all 0.3s; width:100%; height:100%; z-index:1001; overflow-y:auto; 
+} 
+aside#pc-aside .aside_conts {
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    height:100%;
+    position:relative; 
+    padding-top:22rem;
+    box-sizing:border-box;
+}
+aside#pc-aside .aside_conts .atop {
+    position: absolute; top:0; left:0; width:100%;
+}
+aside#pc-aside .aside_conts .atop h1 {position:absolute; top:3rem; left:3rem; font-size:0; margin:0;}
+aside#pc-aside .aside_conts .atop h1 img {width:13.3rem; height:auto;}
+aside#pc-aside .aside_conts .atop > .cate_close {
+    display:block; width:2rem; height:2rem; font-size:0;
+    position:absolute; top:3rem; right:3rem;
+    background:url("../img/partycon2024/as_close.png") no-repeat center;
+    background-size:contain;
+}
+aside#pc-aside .aside_conts .atop .slogon {
+    padding:10rem 3rem 30px; text-align:center; background:#fff;
+    font-size: 3rem;
+    font-weight: 900;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.1;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000;
+}
+aside#pc-aside .aside_conts .atop .slogon span {
+    display:inline-block;
+}
+aside#pc-aside .aside_conts .atop .slogon span.sl1 {
+    border-bottom:solid 1px #000;
+}
+aside#pc-aside .aside_conts .atop .slogon span.sl2 {
+    margin-top:1rem;
+    color: #e60024;
+    border-bottom:solid 1px #e60024;
+}
+
+aside#pc-aside .aside_conts .atop .line {left:0; right:0; height:5px;}
+
+aside#pc-aside .aside_conts > ul {
+    padding:0 3rem;
+}
+aside#pc-aside .aside_conts > ul > li {text-align:left;}
+aside#pc-aside .aside_conts > ul > li + li {margin-top:20px;}
+aside#pc-aside .aside_conts > ul > li > a {font-size:2rem; color:#000; font-weight:700;}
+aside#pc-aside .aside_conts > ul > li > p a {display:inline-block; padding-top:1rem; padding-bottom:1rem; font-size:1.6rem; color:#888;}
+
+/* 반응형 */
+@media all and (min-width:1201px) {
+    .body-fixed {position:relative; overflow-y:inherit;}
+    aside#pc-aside {display:none;}
+}
+
+
+/* footer */
+.pc-footer {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    height:9rem;
+    background:#fff;
+    font-size:2rem;
+    color:#000;
+}
+
+/* quick menu */
+.quick-menu {
+    position:fixed;
+    bottom:8rem;
+    right:2rem;
+    z-index:10;
+}
+.quick-menu > a {
+    display:block;
+    font-size:0;
+    width:7.4rem;
+    height:7.4rem;
+    border:solid 1px #000;
+    border-radius:100vh;
+    -webkit-box-shadow: 0.4rem 0.4rem 1.3rem 0px rgba(0,0,0,0.34);
+    -moz-box-shadow: 0.4rem 0.4rem 1.3rem 0px rgba(0,0,0,0.34);
+    box-shadow: 0.4rem 0.4rem 1.3rem 0px rgba(0,0,0,0.34);
+}
+.quick-menu > a.pc-home {
+    background:#fff url("../img/partycon2024/home.png") no-repeat center;
+    background-size:4.4rem auto;
+}
+.quick-menu > a.pc-top {
+    margin-top:1rem;
+    border:solid 1px #d31421;
+    background:#d31421 url("../img/partycon2024/top.png") no-repeat center;
+    background-size:3rem auto;
+}
+
+
+
+/* 메인 */
+.msec1 {
+
+}
+.msec1 .candi-list {
+    display:flex;
+}
+.msec1 .candi-list li {    
+    width:25%;
+    position:relative;
+}
+.msec1 .candi-list li:nth-child(1) {
+    background: url(https://www.peoplepowerparty.kr/assets/home/img/partycon2024/main-1-bg.png) no-repeat center;
+    background-size:cover;
+}
+.msec1 .candi-list li:nth-child(2) {
+    background: url(https://www.peoplepowerparty.kr/assets/home/img/partycon2024/main-2-bg.png) no-repeat center;
+    background-size:cover;
+}
+.msec1 .candi-list li:nth-child(3) {
+    background:url("../img/partycon2024/main-3-bg.png") no-repeat center;
+    background-size:cover;
+}
+.msec1 .candi-list li:nth-child(4) {
+    background:url("../img/partycon2024/main-4-bg.png") no-repeat center;
+    background-size:cover;
+}
+.msec1 .candi-list li .top {   
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    padding:10% 6%;
+    z-index:2;
+}
+.msec1 .candi-list li .top span {  
+    font-size:2rem;
+    color:#000;
+    font-weight:800;
+}
+.msec1 .candi-list li .top div {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+.msec1 .candi-list li .top div h4 {  
+    font-size:4.8rem;
+    color:#000;
+    font-weight:900;
+}
+.msec1 .candi-list li .top div em {  
+    font-size:2rem;
+    color:#000;
+    font-weight:400;
+}
+.msec1 .candi-list li img {
+    position: relative;
+    width:100%;
+    height:auto;
+    z-index:0;
+}
+.msec1 .candi-list li a {
+    display:none;
+    flex-direction:column;
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    padding:10% 6%;
+    z-index:3;
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(184,37,50,0) 50%, rgba(46,41,79,1) 100%, rgba(46,41,79,1) 100%);
+}
+.msec1 .candi-list li a::after {
+    display:block;
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    border: 0.4rem solid #b82532;
+    z-index:2; 
+}
+.msec1 .candi-list li:hover a {
+    display:flex;
+}
+.msec1 .candi-list li a h5 {
+    margin-top:auto;
+    text-align:center;
+    font-size:3.6rem;
+    color:#fff;
+    font-weight:800;;
+}
+.msec1 .candi-list li a .sns {
+    margin-top:3rem;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:1rem;
+}
+.msec1 .candi-list li a .sns button {
+    position: relative;
+    font-size:0;
+    width:3.2rem;
+    height:3.2rem;
+    border-radius:100vh;   
+    z-index:4;
+}
+.msec1 .candi-list li a .sns button.yu {
+    background: url(https://www.peoplepowerparty.kr/assets/home/img/partycon2024/sns-yu.png) no-repeat center;
+    background-size:contain;
+}
+.msec1 .candi-list li a .sns button.fa {
+    background: url( https://www.peoplepowerparty.kr/assets/home/img/partycon2024/sns-fa.png) no-repeat center;
+    background-size:contain;
+}
+.msec1 .candi-list li a .sns button.bl {
+    background:url("../img/partycon2024/sns-bl.png") no-repeat center;
+    background-size:contain;
+}
+.msec1 .candi-list li a .sns button.in {
+    background: url(https://www.peoplepowerparty.kr/assets/home/img/partycon2024/sns-in.png) no-repeat center;
+    background-size:contain;
+}
+
+@media all and (max-width:1200px) {
+    .msec1 .candi-list {
+        flex-wrap:wrap;
+    }
+    .msec1 .candi-list li {
+        width:50%;
+    }
+}
+
+/* tag */
+.tag {
+    background:#d31421;
+    padding:1.5rem 0;
+}
+.tag ul {
+
+}
+.tag ul li {
+    display:flex;
+    align-items:center;
+    gap:2rem;    
+}
+.tag ul li::after {
+    display:inline-block;
+    content:"";
+    width:1.8rem;
+    height:2rem;
+    background:url("../img/partycon2024/tag_bar.png") no-repeat center;
+    background-size:contain;
+    margin-right:2rem;
+}
+.tag ul li span {
+    font-size:2.4rem;
+    color:#fff;
+    font-weight:500;
+    white-space:nowrap;
+}
+
+/* mtit */
+.tit-top {
+    margin:0 0 4rem;
+    display:flex;
+    gap:1.5rem;
+}
+.tit-top .mtit {    
+    font-size:6rem;
+    color:#000;
+    font-weight:900;
+    line-height:1;
+}
+.tit-top span {
+    align-self: flex-start;
+    font-size:2.4rem;
+    color:#000;
+    font-weight:500;
+}
+
+@media all and (max-width:1200px) {
+
+}
+@media all and (max-width:520px) {
+    .msec1 .candi-list li .top span {
+        font-size:1.8rem;
+    }
+    .msec1 .candi-list li .top div h4 {  
+        font-size:3.8rem;
+    }
+    .msec1 .candi-list li .top div em {
+        font-size:1.8rem;
+    }
+    .tit-top .mtit {    
+        font-size:4rem;
+    }
+}
+@media all and (max-width:450px) {
+    .msec1 .candi-list li .top span {
+        font-size:1.6rem;
+    }
+    .msec1 .candi-list li .top div h4 {  
+        font-size:2.8rem;
+    }
+    .msec1 .candi-list li .top div em {
+        font-size:1.6rem;
+    }
+}
+
+/* msec2 */
+.msec2 {
+    padding:8rem 4% 10rem;
+}
+.msec2 > .indiv {
+    max-width:160rem;
+    margin:0 auto;
+}
+
+.msec2 .sup-list {
+    display:flex;
+    flex-wrap:wrap;
+}
+.msec2 .sup-list li {
+    margin-top:-1px;
+    margin-left:-1px;
+    width:calc(25% + 1px);
+    border:solid 1px #000;
+    padding:4rem;
+}
+.msec2 .sup-list li .name {
+
+}
+.msec2 .sup-list li .name h3 {
+    line-height:1;
+    font-size:3.6rem;
+    color:#000;
+    font-weight:800;
+    background:url("../img/partycon2024/more-arr.png") no-repeat right center;
+    background-size:1rem auto;
+}
+.msec2 .sup-list li .name p {
+    margin-top:1rem;
+    font-size:2.2rem;
+    color:#000;
+}
+.msec2 .sup-list li .img {
+    margin-top:2rem;
+}
+.msec2 .sup-list li .img img {
+    width:100%;
+}
+
+.msec2 .sup-list li .sns {
+    margin-top:2rem;
+    display:flex;
+    align-items:center;
+    gap:1rem;
+}
+.msec2 .sup-list li .sns a {
+    position: relative;
+    display:inline-block;
+    font-size:0;
+    width:3.2rem;
+    height:3.2rem;
+    border-radius:100vh;   
+    z-index:4;
+}
+.msec2 .sup-list li .sns a.yu {
+    background:url("../img/partycon2024/sns-yu.png") no-repeat center;
+    background-size:contain;
+}
+.msec2 .sup-list li .sns a.fa {
+    background:url("../img/partycon2024/sns-fa.png") no-repeat center;
+    background-size:contain;
+}
+.msec2 .sup-list li .sns a.bl {
+    background:url("../img/partycon2024/sns-bl.png") no-repeat center;
+    background-size:contain;
+}
+.msec2 .sup-list li .sns a.in {
+    background:url("../img/partycon2024/sns-in.png") no-repeat center;
+    background-size:contain;
+}
+
+@media all and (max-width:1200px) {
+    .msec2 .sup-list li {
+        width:calc(50% + 1px);
+    }
+}
+@media all and (max-width:600px) {
+    .msec2 .sup-list li.kjw .name p br {
+        display:none;
+    }
+}
+@media all and (max-width:550px) {
+    .msec2 .sup-list li.hug .name p br {
+        display:none;
+    }
+}
+@media all and (max-width:520px) {
+    .msec2 .sup-list li {
+        padding:2rem;
+    }
+    .msec2 .sup-list li .name h3 {
+        font-size:3rem;
+    }
+}
+@media all and (max-width:480px) {
+    .msec2 .sup-list li.iyh .name p br {
+        display:none;
+    }
+}
+@media all and (max-width:450px) {
+    .msec2 .sup-list li.lsg .name p br {
+        display:none;
+    }
+}
+@media all and (max-width:440px) {
+    .msec2 .sup-list li .name p {
+        font-size:2rem;
+    }
+}
+@media all and (max-width:410px) {
+    .msec2 .sup-list li.kjw .name p {
+        font-size:1.8rem;
+    }
+}
+@media all and (max-width:380px) {
+    .msec2 .sup-list li.lsg .name p {
+        font-size:1.8rem;
+    }
+}
+@media all and (max-width:370px) {
+    .msec2 .sup-list li.kjw .name p {
+        font-size:1.6rem;
+    }
+}
+
+/* msec3 */
+.msec3 {
+    padding:8rem 4% 26rem;
+    background:url("../img/partycon2024/young-bg.png") no-repeat center;
+    background-size:cover;
+}
+.msec3 > .indiv {
+    max-width:160rem;
+    margin:0 auto;
+}
+.msec3 .young-list {
+    display:flex;
+    flex-wrap:wrap;
+}
+.msec3 .young-list li {
+    margin-top:-1px;
+    margin-left:-1px;
+    width:calc(25% + 1px);
+    border:solid 1px #000;
+    padding:4rem;
+}
+.msec3 .young-list li .name {
+
+}
+.msec3 .young-list li .name h3 {
+    line-height:1;
+    font-size:3rem;
+    color:#000;
+    font-weight:800;
+    background:url("../img/partycon2024/more-arr.png") no-repeat right center;
+    background-size:1rem auto;
+}
+.msec3 .young-list li .name p {
+    margin-top:1rem;
+    font-size:2.2rem;
+    color:#000;
+}
+.msec3 .young-list li .img {
+    margin-top:2rem;
+}
+.msec3 .young-list li .img img {
+    width:100%;
+}
+
+.msec3 .young-list li .sns {
+    margin-top:2rem;
+    display:flex;
+    align-items:center;
+    gap:1rem;
+}
+.msec3 .young-list li .sns a {
+    position: relative;
+    display:inline-block;
+    font-size:0;
+    width:3.2rem;
+    height:3.2rem;
+    border-radius:100vh;   
+    z-index:4;
+}
+.msec3 .young-list li .sns a.yu {
+    background:url("../img/partycon2024/sns-yu.png") no-repeat center;
+    background-size:contain;
+}
+.msec3 .young-list li .sns a.fa {
+    background:url("../img/partycon2024/sns-fa.png") no-repeat center;
+    background-size:contain;
+}
+.msec3 .young-list li .sns a.bl {
+    background:url("../img/partycon2024/sns-bl.png") no-repeat center;
+    background-size:contain;
+}
+.msec3 .young-list li .sns a.in {
+    background:url("../img/partycon2024/sns-in.png") no-repeat center;
+    background-size:contain;
+}
+
+@media all and (max-width:1200px) {
+    .msec3 .young-list li {
+        width:calc(50% + 1px);
+    }
+}
+@media all and (max-width:620px) {
+    .msec3 .young-list li.psh .name p br {
+        display:none;
+    }
+    .msec3 .young-list li.jinho .name p br {
+        display:none;
+    }
+}
+@media all and (max-width:540px) {
+    .msec3 .young-list li.phj .name p br {
+        display:none;
+    }
+}
+@media all and (max-width:520px) {
+    .msec3 .young-list li .name h3 {
+        font-size:2.6rem;
+    }
+    .msec3 .young-list li {
+        padding:2rem;
+    }
+}
+@media all and (max-width:440px) {
+    .msec3 .young-list li .name p {
+        font-size:2rem;
+    }
+}
+@media all and (max-width:400px) {
+    .msec3 .young-list li.jjo .name p br {
+        display:none;
+    }
+    .msec3 .young-list li.phj .name p {
+        font-size:1.8rem;
+    }
+    .msec3 .young-list li.hym .name p {
+        font-size:1.8rem;
+    }
+    .msec3 .young-list li.hym .name p br {
+        display:none;
+    }
+    .msec3 .young-list li.adh .name p {
+        font-size:1.8rem;
+    }
+    .msec3 .young-list li.adh .name p br {
+        display:none;
+    }
+    .msec3 .young-list li.psh .name p {
+        font-size:1.8rem;
+    }
+    .msec3 .young-list li.jinho .name p {
+        font-size:1.8rem;
+    }
+}
+@media all and (max-width:380px) {
+    .msec3 .young-list li.kjs .name p br {
+        display:none;
+    }
+}
+
+/* msec4 */
+.msec4 {
+    margin-top:-18rem;
+    padding:0 4%;
+}
+.msec4 > .indiv {
+    max-width:160rem;
+    margin:0 auto;
+}
+.msec4 ul {
+    display:flex;
+    gap:5rem;
+}
+.msec4 ul li {
+    flex:1;
+}
+.msec4 ul li .top {
+    display:flex;
+    gap:3rem;
+    row-gap:1rem;
+    align-items:center;
+    background:url("../img/partycon2024/more-arr2.png") no-repeat right center;
+    background-size:1.3rem auto;
+}
+.msec4 ul li .top .tit {
+    font-size:4rem;
+    color:#000;
+    font-weight:800;
+}
+.msec4 ul li .top .stx {
+    font-size:2rem;
+    color:#000;
+}
+.msec4 ul li .img {
+    margin-top:3rem;
+}
+.msec4 ul li .img img {
+    width:100%;
+}
+
+@media all and (max-width:1200px) {
+    .msec4 ul {
+        flex-direction:column;
+    }
+    .msec4 ul li {
+
+    }
+}
+@media all and (max-width:520px) {
+    .msec4 ul li .top {
+        flex-direction:column;
+        align-items:flex-start;
+        background:url("../img/partycon2024/more-arr2.png") no-repeat right top 0.5rem;
+        background-size:1.3rem auto;
+    }
+    .msec4 ul li .top .tit {
+        font-size:3rem;
+    }
+    .msec4 ul li .top .stx {
+        font-size:1.6rem;
+    }
+}
+
+
+
+
+
+
+/* 상세 */
+.vsec1 {
+    padding:0 4%;
+    background:url("../img/partycon2024/view-bg.png") repeat-x center top;
+    background-size:100%;
+}
+.vsec1 .indiv {
+    max-width:160rem;
+    margin:auto;
+    padding:12rem 0 16rem;
+    padding-left:4.5rem;
+}
+.vsec1 .profile-box {
+    max-width:121rem;
+    margin:auto;
+    border:solid 1px #000;
+    background:#fff;
+    display:flex;    
+    padding:5rem;
+    gap:0;
+}    
+.vsec1 .profile-box .img {
+    position:relative;
+    width:52rem;
+    height:62.5rem;
+    z-index:3;
+}
+.vsec1 .profile-box .img > div {
+    position:relative;
+    top:-9.5rem;
+    left:-9.5rem;
+    z-index:3;    
+}   
+.vsec1 .profile-box .img > div::before {
+    display:block;
+    content:"";
+    position:absolute;
+    width:100%;
+    min-height:100%;
+    background:#fff;
+    border:solid 1px #000;
+    top:1.5rem;
+    left:1.5rem;
+    z-index:-1;
+}
+.vsec1 .profile-box .img > div::after {
+    display:block;
+    content:"";
+    position:absolute;
+    width:100%;
+    min-height:100%;
+    background:#fff;
+    border:solid 1px #000;
+    top:3rem;
+    left:3rem;
+    z-index:-2;
+}
+.vsec1 .profile-box .img img {
+    width:100%;
+    border:solid 1px #000;
+}
+.vsec1 .profile-box .info {
+    display:flex;
+    flex-direction:column;
+}
+.vsec1 .profile-box .slogan {
+    font-size:3rem;
+    color:#000;
+    font-weight:600;
+}
+.vsec1 .profile-box .slogan b {
+    font-size:3rem;
+    color:#d31421;
+    font-weight:600;
+}
+.vsec1 .profile-box .name {
+    font-size:6.8rem;
+    color:#000;
+    font-weight:900;
+    margin:1rem 0 4rem;
+}
+.vsec1 .profile-box dl {
+    margin:0 0 4rem;
+    display:flex;
+    gap:5rem;
+}
+.vsec1 .profile-box dl dt {
+    font-size:2.4rem;
+    color:#000;
+    font-weight:600;
+}
+.vsec1 .profile-box dl dd {
+    flex:1;
+}
+.vsec1 .profile-box dl dd p {
+    font-size:2rem;
+    color:#757575;
+    font-weight:400;
+}
+.vsec1 .profile-box dl dd p + p {
+    margin-top:1rem;
+}
+.vsec1 .profile-box .sns {
+    margin-top:auto;
+    display:flex;
+    align-items:center;
+    gap:1rem;
+}
+.vsec1 .profile-box .sns a {
+    display:block;
+    width:5rem;
+    height:5rem;
+    font-size:0;
+    border-radius:100vh;
+}
+.vsec1 .profile-box .sns .yu {
+    background:url("../img/partycon2024/pf_sns_yu.png") no-repeat center;
+    background-size:contain;
+}
+.vsec1 .profile-box .sns .fa {
+    background:url("../img/partycon2024/pf_sns_fa.png") no-repeat center;
+    background-size:contain;
+}
+.vsec1 .profile-box .sns .bl {
+    background:url("../img/partycon2024/pf_sns_bl.png") no-repeat center;
+    background-size:contain;
+}
+.vsec1 .profile-box .sns .in {
+    background:url("../img/partycon2024/pf_sns_in.png") no-repeat center;
+    background-size:contain;
+}
+
+/* sec num */
+.sec-num {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:url("../img/partycon2024/view-line.png") no-repeat center;
+}
+.sec-num span {
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:6.4rem;
+    height:3.2rem;
+    line-height:1;
+    border-radius:0.8rem;
+    font-size:1.8rem;
+    color:#fff;
+    font-weight:800;
+    background: rgb(184,37,50);
+    background: linear-gradient(90deg, rgba(184,37,50,1) 0%, rgba(46,41,79,1) 100%);
+}
+
+/* title */
+.vtit {
+    margin-top:4rem;
+    text-align:center;
+    font-size:5rem;
+    color:#000;
+    font-weight:900;
+}
+
+.vsec2 {
+    padding:0 4%;
+}
+.vsec2 .indiv {
+    max-width:160rem;
+    margin:0 auto;
+}
+.vsec2 .wrap {
+    margin-top:11rem;
+    display:flex;
+}
+.vsec2 .wrap .memo {
+    margin-top:-3rem;
+    flex:1;
+    padding-right:10rem;
+}
+.vsec2 .wrap .memo p {
+    margin-top:4rem;
+    font-size:2.2rem;
+    color:#000;
+}
+.vsec2 .wrap .memo p b {
+    font-weight:700;
+}
+.vsec2 .wrap .memo p.mhead {
+    margin-top:0;
+    font-size:4rem;
+    color:#d31421;
+    font-weight:600;
+}
+.vsec2 .wrap .memo p.msub {
+    margin-top:2rem;
+    font-size:4rem;
+}
+.vsec2 .wrap .photo {
+    flex:1;
+    margin-left:auto;
+    position:relative;
+    max-width:53rem;
+    height:auto;
+    z-index:3;
+}
+.vsec2 .wrap .photo > div {
+    position:relative;
+    top:-3rem;
+    left:-3rem;
+    z-index:3;    
+}   
+.vsec2 .wrap .photo > div::before {
+    display:block;
+    content:"";
+    position:absolute;
+    width:100%;
+    min-height:100%;
+    background:#fff;
+    border:solid 1px #000;
+    top:1.5rem;
+    left:1.5rem;
+    z-index:-1;
+}
+.vsec2 .wrap .photo > div::after {
+    display:block;
+    content:"";
+    position:absolute;
+    width:100%;
+    min-height:100%;
+    background:#fff;
+    border:solid 1px #000;
+    top:3rem;
+    left:3rem;
+    z-index:-2;
+}
+.vsec2 .wrap .photo img {
+    width:100%;
+    border:solid 1px #000;
+}
+
+/* vsec3 */
+.vsec3 {
+    position:relative;
+    margin-top:15rem;
+    padding:0 4% 12rem;
+    background:url("../img/partycon2024/vsec3-bg.png") no-repeat center;
+    background-size:cover;
+}
+.vsec3 .indiv {
+    max-width:160rem;
+    margin:0 auto;
+}
+.vsec3 .sec-num {
+    position:relative;
+    top:-1.5rem;
+}
+.vsec3 .vtit {
+    margin-top:2.5rem;
+}
+.vsec3 ul {
+    margin-top:6rem;
+    display:flex;
+    row-gap:3rem;
+    flex-wrap:wrap;
+    margin-left:-3rem;
+}
+.vsec3 ul li {
+    width:calc(50% - 3rem);    
+    margin-left:3rem;
+    background:#fff;
+    display:flex;
+    padding:4rem;
+    gap:4rem;
+    -webkit-box-shadow: 2rem 2rem 4rem 0px rgba(0,0,0,0.09);
+    -moz-box-shadow: 2rem 2rem 4rem 0px rgba(0,0,0,0.09);
+    box-shadow: 2rem 2rem 4rem 0px rgba(0,0,0,0.09);    
+}
+.vsec3 ul li .no {
+    white-space:nowrap;
+}
+.vsec3 ul li .no span {
+    font-size:7rem;
+    font-weight:100;
+    color:#000;
+    line-height:1;
+}
+.vsec3 ul li .info {
+    flex:1;
+}
+.vsec3 ul li .info p.ind {
+    padding-left:1.2rem;
+    text-indent:-1.2rem;
+    margin-top:1rem;
+    font-size:2rem;
+    color:#757575;
+}
+.vsec3 ul li .info p.phead {
+    padding-bottom:1rem;
+    font-size:3.4rem;
+    color:#000;
+    font-weight:800;
+}
+.vsec3 ul li .info p.phead b {
+    color:#d31421;
+}
+
+/* .vsec4 */
+.vsec4 {
+    padding:15rem 4%;
+}
+.vsec4 .indiv {
+    max-width:160rem;
+    margin:0 auto;
+}
+.vsec4 .indiv .vedio-wrap {
+    margin-top:8rem;
+    padding-left:5rem;
+    position: relative;
+}
+.vsec4 .indiv .vedio-wrap .vw-box {
+    position:relative;
+    border:solid 1px #000;
+    display:flex;
+    padding:5rem;
+    background:#fff;
+    z-index:3;
+}
+.vsec4 .indiv .vedio-wrap .vw-box::after {
+    display:block;
+    content:"";
+    position:absolute;
+    left:-1px;
+    right:-1px;
+    top:calc(100% - 10rem);
+    height:10rem;
+    background:#fff;
+    border-top:solid 1px #000;
+    z-index:1;
+}
+.vsec4 .indiv .vedio-wrap .vw-box .vedio {
+    position:relative;
+    top:-6.5rem;
+    left:-8rem;
+    flex:2;
+    border:solid 1px #000;
+    background:#fff;
+    z-index:2;
+}
+.vsec4 .indiv .vedio-wrap .vw-box .vedio .mov_slide {
+    position:relative;
+    top:-1.5rem;
+    left:-2rem;
+    border:solid 1px #000;
+    padding:5rem;
+    background:#fff;
+    z-index:3;
+}
+.vsec4 .indiv .vedio-wrap .vw-box .vedio .mov_slide .mov {
+    position:relative;
+    padding-top:55%;
+}
+.vsec4 .indiv .vedio-wrap .vw-box .vedio .mov_slide .mov .ifm {
+    position:absolute;
+    top:0;left:0;width:100%;height:100%;
+}
+.vsec4 .indiv .vedio-wrap .vw-box .info {
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    gap:3rem;
+}
+.vsec4 .indiv .vedio-wrap .vw-box .info .itit {
+    font-size:3.6rem;
+    color:#000;
+    font-weight:700;
+}
+.vsec4 .indiv .vedio-wrap .vw-box .info .yu-go {
+
+}
+.vsec4 .indiv .vedio-wrap .vw-box .info .yu-go a {
+    display:inline-block;
+    padding:1.5rem 2rem;
+    border-radius:1rem;
+    background:#d31421;
+}
+.vsec4 .indiv .vedio-wrap .vw-box .info .yu-go a span {
+    display:inlin-block;
+    padding-left:3.4rem;
+    background:url("../img/partycon2024/go-yu.png") no-repeat left center;
+    background-size:2.4rem auto;
+    font-size:1.8rem;
+    color:#fff;
+    font-weight:500;
+}
+.vsec4 .indiv .vedio-wrap .vw-box .info .mov_nav {
+    position:relative;
+    top:-12rem;
+    margin-top:auto;
+    display:flex;
+    gap:2rem;
+}
+.vsec4 .indiv .vedio-wrap .vw-box .info .mov_nav li {
+    max-width:19rem;
+    position:relative;
+}
+.vsec4 .indiv .vedio-wrap .vw-box .info .mov_nav li.active {
+    -webkit-box-shadow: 1.7rem 1.7rem 2.7rem 0px rgba(0,0,0,0.19);
+    -moz-box-shadow: 1.7rem 1.7rem 2.7rem 0px rgba(0,0,0,0.19);
+    box-shadow: 1.7rem 1.7rem 2.7rem 0px rgba(0,0,0,0.19);
+}
+.vsec4 .indiv .vedio-wrap .vw-box .info .mov_nav li a:before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:rgba(0, 0, 0, 0.5);
+    z-index:2;
+}
+.vsec4 .indiv .vedio-wrap .vw-box .info .mov_nav li.active a:before {
+    display:none;
+}
+.vsec4 .indiv .vedio-wrap .vw-box .info .mov_nav li a:after {
+    display: none;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: solid 0.4rem #d31421;
+}
+.vsec4 .indiv .vedio-wrap .vw-box .info .mov_nav li.active a:after {
+    display:block;
+}
+.vsec4 .indiv .vedio-wrap .vw-box .info .mov_nav li img {
+    max-width:100%;
+}
+
+/* vsec5 */
+.vsec5 {
+    position: relative;
+    padding:0 4% 7rem;
+    background:url("../img/partycon2024/vsec5-bg.png") repeat center;
+}
+.vsec5 .indiv {
+    position:relative;
+    max-width:160rem;
+    margin:0 auto;
+}
+.vsec5 .sec-num {
+    position: relative;
+    top:-1.5rem;
+}
+.vsec5 .vtit {
+    margin-top:2.5rem;
+}
+.vsec5 .pm-list {    
+    max-width:121rem;
+    margin:auto;
+    margin-top:5rem;
+}
+.vsec5 .pm-list .bx-wrapper {
+    max-width:100% !important;
+}
+.vsec5 .pm-list ul {
+    display:flex;
+    column-gap:4rem;
+}
+.vsec5 .pm-list ul li {
+    max-width:27rem;
+    padding:1rem 0 0 1rem;
+    position:relative;
+}
+.vsec5 .pm-list ul li > div {
+    position:relative;
+    border:solid 1px #000;
+    background:#fff;
+}
+.vsec5 .pm-list ul li > div a {
+    display:block;
+    border:solid 1px #000;
+    position:relative;
+    top:-1rem;
+    left:-1rem;
+}
+.vsec5 .pm-list ul li img {
+    width:100%;
+}
+.vsec5 .pm-list ul li.on > div,
+.vsec5 .pm-list ul li:hover > div {
+    background: rgb(225,1,37);
+    background: linear-gradient(126deg, rgba(225,1,37,1) 0%, rgba(23,42,84,1) 100%);
+}
+.vsec5 .pm-list ul li.on > div a,
+.vsec5 .pm-list ul li:hover > div a {
+
+}
+.vsec5 .pm-list ul li.on a:after,
+.vsec5 .pm-list ul li:hover a:after {
+    display:block;
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    background:rgba(0, 0, 0, 0.2);
+    border:solid 0.3rem #7c161b;
+    z-index:2;
+}
+.vsec5 .pm-list ul li.on a:before,
+.vsec5 .pm-list ul li:hover a:before {
+    display:block;
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    background:url("../img/partycon2024/hover-btn.png") no-repeat center;
+    background-size:7rem auto;
+    z-index:3;
+}
+.vsec5 .control {
+    position: absolute;
+    top:8rem;
+    right:0;
+    display:flex;
+    align-items:center;
+    gap:4rem;
+}
+.vsec5 .control .page {
+    font-size:2.4rem;
+    color:#ccc;
+    font-weight:800;
+    display:flex;
+    align-items:center;
+    gap:0.5rem;
+}
+.vsec5 .control .page .cur {
+    color:#000;
+}
+.vsec5 .control .bx-next {
+    display:flex;
+    align-items:center;
+    gap:4rem;
+}
+.vsec5 .control .bx-next a {
+    display:block;
+    width:1.4rem;
+    height:1.9rem;
+    font-size:0;
+}
+.vsec5 .control .bx-next a.prev {
+    background:url("../img/partycon2024/prev.png") no-repeat center;
+    background-size:contain;
+}
+.vsec5 .control .bx-next a.next {
+    background:url("../img/partycon2024/next.png") no-repeat center;
+    background-size:contain;
+}
+
+/* 레이어 */
+.pop_layer {
+	background-color:rgba(255,255,255,.8); 
+	justify-content:center; /* 수평 중앙정렬 */
+	align-items:center;     /* 수직 중앙정렬 */
+	position:fixed;         /* 화면 고정 */
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;       /* 모든 방향에 0 (화면에 꽉차게) */
+	display:flex; 	/* 처음부터 보이게 하는 상황이라면 display:flex; */
+	padding:5%;   /* 반응형 */
+	opacity:0;
+    transition:all 0.3s ease;
+    transform:scale(1.2);
+    z-index:-1;
+    overflow-y:auto;
+}
+.pop_layer.active {
+    opacity:1;
+    z-index:1000;
+    transform:scale(1);
+}
+.pop_layer .ly-conts {
+    max-width:64rem;
+    margin:auto;
+	position:relative;
+	top:0;
+	bottom:0;
+    background:url("../img/partycon2024/photo_pmo_frame.png") no-repeat center;
+    background-size:cover;
+    box-shadow: .4rem .4rem 3rem rgba(0,0,0,.2); /* 그림자 효과 */
+    padding:1.5rem;
+	z-index:1001;
+}
+.pop_layer .ly-conts .img img {width:100%;}
+.pop_layer .ly-conts .close {
+    display:block;
+    width:7rem;
+    height:7rem;
+    position:absolute;
+    top:-1.5rem;
+    left:calc(100% + 5rem);
+    transform:translateX(-50%);
+    font-size:0;
+    background:url("../img/partycon2024/pmo_ly_close.png") no-repeat center;
+    background-size:3.6rem auto;
+}
+
+
+.pop_layer .pc-prev {
+    position:fixed;
+    top:50%;
+    left:10%;
+    display: block;
+    width: 6rem;
+    height: 6rem;
+    font-size: 0;
+    background: url("../img/partycon2024/ly_prev.png") no-repeat center;
+    background-size: 6rem auto;
+    transform:translateY(-50%) rotate(-90deg);
+    z-index:9999;
+}
+
+.pop_layer .pc-next {
+    position:fixed;
+    top:50%;
+    right:10%;   
+    display: block;
+    width: 6rem;
+    height: 6rem;
+    font-size: 0;
+    background: url("../img/partycon2024/ly_next.png") no-repeat center;
+    background-size: 6rem auto;
+    transform:translateY(-50%) rotate(270deg);
+    z-index:9999;
+}
+
+@media all and (max-width:650px) {
+    .pop_layer {padding:10%;}
+    .pop_layer .ly-conts .close {
+        width: 5rem;
+        height: 5rem;
+        top:-5rem;
+        left:100%;
+    }
+}
+@media all and (max-width:520px) {
+    .pop_layer .pc-prev {left:5%; opacity:0.5;}
+    .pop_layer .pc-next {right:5%; opacity:0.5;}
+}
+
+@media all and (max-width:920px) {
+    .vsec1 .indiv {
+        padding-left:0;
+    }
+    .vsec1 .profile-box {
+        flex-direction: column;
+        gap:5rem;
+    }
+    .vsec1 .profile-box .img {
+        width:100%;
+        height:auto;
+    }
+    .vsec1 .profile-box .img > div {
+        top:inherit;
+        left:inherit;
+    }
+    .vsec1 .profile-box .img > div::before,
+    .vsec1 .profile-box .img > div::after {
+        display:none;
+    }
+}
+@media all and (max-width:520px) {
+    .vsec1 .indiv {
+        padding:6rem 0 8rem;
+    }
+    .vsec1 .profile-box {
+        padding:3rem;
+    }
+    .vsec1 .profile-box .slogan {
+        font-size:2rem;
+    }
+    .vsec1 .profile-box .slogan b {
+        font-size:2rem;
+    }
+    .vsec1 .profile-box .name {
+        font-size:4rem;
+    }
+    .vsec1 .profile-box dl {
+        gap:2rem;
+    }
+    .vsec1 .profile-box dl dt {
+        font-size:1.8rem;
+    }
+    .vsec1 .profile-box dl dd p {
+        font-size:1.6rem;
+    }
+    .vsec1 .profile-box .sns a {
+        width:4rem;
+        height:4rem;
+    }
+}
+
+@media all and (max-width:920px) {
+    .vtit {
+        font-size:4rem;
+    }
+}
+@media all and (max-width:520px) {
+    .vtit {
+        font-size:3rem;
+    }
+}
+
+@media all and (max-width:1200px) {
+    .vsec2 .wrap {
+        
+    }
+    .vsec2 .wrap .memo {
+        flex:2;
+    }
+}
+@media all and (max-width:920px) {
+    .vsec2 .wrap {
+        flex-direction: column;
+        gap:4rem;
+    }
+    .vsec2 .wrap .memo {
+        padding-right:0;
+    }
+    .vsec2 .wrap .memo p.mhead {
+        font-size:3rem;
+    }
+    .vsec2 .wrap .memo p.msub {
+        font-size:3rem;
+    }
+    .vsec2 .wrap .memo p {
+        font-size:2rem;
+    }
+    .vsec2 .wrap .photo {
+        max-width:100%;
+        margin-left:inherit;
+        flex:inherit;
+    }
+    .vsec2 .wrap .photo > div {
+        top:inherit;
+        left:inherit;
+    }
+    .vsec2 .wrap .photo > div::before,
+    .vsec2 .wrap .photo > div::after {
+        display:none;
+    }
+}
+@media all and (max-width:520px) {
+    .vsec2 .wrap {
+        margin-top:8rem;
+    }
+    .vsec2 .wrap .memo p.mhead {
+        font-size:2.2rem;
+    }
+    .vsec2 .wrap .memo p.msub {
+        font-size:2.2rem;
+    }
+    .vsec2 .wrap .memo p {
+        font-size:1.6rem;
+    }
+    .vsec2 .wrap .memo p.msub br {
+        display:none;
+    }
+}
+
+@media all and (max-width:1200px) {
+    .vsec3 ul li {
+        flex-direction: column;
+    }
+}
+@media all and (max-width:920px) {
+    .vsec3 ul li {
+        padding:3rem;
+        gap:3rem;
+    }
+    .vsec3 ul li .no span {
+        font-size:5rem;
+    }
+    .vsec3 ul li .info p.phead {
+        font-size:2.8rem;
+    }
+    .vsec3 ul li .info p.ind {
+        font-size:1.8rem;
+    }
+}
+@media all and (max-width:520px) {
+    .vsec3 {
+        margin-top:10rem;
+    }
+    .vsec3 ul {
+        margin-left:0;
+    }
+    .vsec3 ul li {
+        width:100%;
+        margin-left:0;
+    }
+    .vsec3 ul li .no span {
+        font-size:4rem;
+    }
+    .vsec3 ul li .info p.phead {
+        font-size:2.2rem;
+    }
+    .vsec3 ul li .info p.ind {
+        font-size:1.6rem;
+    }
+}
+
+@media all and (max-width:1520px) {
+    .vsec4 .indiv .vedio-wrap {
+        padding-left:0;
+        margin-top:6rem;
+    }
+    .vsec4 .indiv .vedio-wrap .vw-box {
+        flex-direction:column;
+        gap:4rem;
+    }
+    .vsec4 .indiv .vedio-wrap .vw-box .vedio {
+        top:inherit;
+        left:inherit;
+        border:none;
+    }
+    .vsec4 .indiv .vedio-wrap .vw-box .vedio .mov_slide {
+        top:inherit;
+        left:inherit;
+        border:none;
+        padding:0;
+    }
+    .vsec4 .indiv .vedio-wrap .vw-box .info .mov_nav {
+        top:inherit;
+        margin-top:4rem;
+    }
+    .vsec4 .indiv .vedio-wrap .vw-box::after {
+        display:none;
+    }
+}
+@media all and (max-width:920px) {
+    .vsec4 .indiv .vedio-wrap .vw-box {
+        padding:3rem;
+    }
+    .vsec4 .indiv .vedio-wrap .vw-box .info .itit {
+        font-size:3rem;
+    }
+    .vsec4 .indiv .vedio-wrap .vw-box .info .yu-go a span {
+        font-size:1.6rem;
+    }
+    .vsec4 .indiv .vedio-wrap .vw-box .info .mov_nav li {
+        max-width:15rem;
+    }
+}
+@media all and (max-width:520px) {
+    .vsec4 .indiv .vedio-wrap .vw-box .info .itit {
+        font-size:2.4rem;
+    }
+    .vsec4 .indiv .vedio-wrap .vw-box .info .yu-go a span {
+        font-size:1.5rem;
+    }
+    .vsec4 .indiv .vedio-wrap .vw-box .info .mov_nav li {
+        max-width:12rem;
+    }
+}
+
+@media all and (max-width:520px) {
+    .vsec5 .pm-list {
+        margin-top:10rem;
+    }
+    .vsec5 .control {
+        top:13rem;
+    }
+}
+
+
+
+/* 일정안내 */
+
+/* stit */
+.stit {
+    padding:6rem 0 3rem;
+    text-align:center;
+    font-size:5rem;
+    color:#000;
+    font-weight:900;
+}
+
+/* 일정안내 */
+.pc-schedule {
+    background:url("../img/partycon2024/schedul-bg.png") repeat-x center top;
+    background-size:100%;
+    padding:0 4%;
+}
+.pc-schedule .indiv {
+    max-width:160rem;
+    margin:auto;
+    background:#fff;
+    padding:5rem 4%;
+    -webkit-box-shadow: 2.5rem 2.5rem 4.6rem 0px rgba(0,0,0,0.09);
+    -moz-box-shadow: 2.5rem 2.5rem 4.6rem 0px rgba(0,0,0,0.09);
+    box-shadow: 2.5rem 2.5rem 4.6rem 0px rgba(0,0,0,0.09);
+}
+.pc-schedule dl {
+    display:flex;
+    gap:3rem;
+    padding:5rem 0;
+}
+.pc-schedule dl:first-child {
+    padding-top:0;
+}
+.pc-schedule dl + dl {
+    border-top:solid 1px #ddd;
+}
+.pc-schedule dl dt {
+    position:relative;
+    width:25rem;
+    font-size:3rem;
+    color:#000;
+    font-weight:800;
+    padding-left:3rem;
+    line-height:1;
+    white-space:nowrap;
+}
+.pc-schedule dl dt::before {
+    display:block;
+    content:"";
+    width:1rem;
+    height:1rem;
+    background:#d31421;
+    border-radius:100vh;
+    position:absolute;
+    top:1rem;
+    left:0;
+}
+.pc-schedule dl dd {
+    flex:1;
+}
+.pc-schedule dl dd .total {
+    font-size:3rem;
+    color:#d31421;
+    font-weight:900;
+    margin-bottom:3rem;
+}
+.pc-schedule dl dd .row {    
+    display:flex;
+    gap:3rem;
+    row-gap:1rem;
+}
+.pc-schedule dl dd .row + .row {
+    margin-top:3rem;
+}
+.pc-schedule dl dd .row .place {
+    width:40rem;
+    font-size:2.4rem;
+    color:#000;
+    font-weight:500;
+}
+.pc-schedule dl dd .row .place span {
+    display:block;
+    color:#757575;
+}
+.pc-schedule dl dd .row .place em {
+    display:inline-block;
+    color:#757575;
+    font-style:normal;
+}
+.pc-schedule dl dd .date {
+    font-size:2.4rem;
+    color:#757575;
+}
+.pc-schedule dl dd .date strong {
+    font-size:3rem;
+    color:#d31421;
+    font-weight:800;
+}
+.pc-schedule dl dd .date span {
+    display:block;
+    font-size:2rem;
+    color:#757575;
+}
+.pc-schedule dl dd .row .stack-live {
+    width:32rem;
+    margin-left:auto;
+    display:flex;
+    flex-direction:column;
+    gap:1rem;
+}
+.pc-schedule dl dd .row .stack-live div {
+    
+}
+.pc-schedule dl dd .row .stack-live div a {
+    display:inline-block;
+    padding-left:3rem;
+    background:url("../img/partycon2024/live-yu.png") no-repeat left center;
+    background-size:2.4rem auto;
+    font-size:1.8rem;
+    color:#000;
+    font-weight:700;
+}
+
+@media all and (max-width:1280px) {
+    .pc-schedule dl dd .row {
+        flex-wrap:wrap;
+    }
+    .pc-schedule dl dd .row .stack-live {
+        flex-basis:100%;
+        margin-left:inherit;
+    }
+}
+@media all and (max-width:920px) {
+    .stit {
+        font-size:4rem;
+    }
+    .pc-schedule dl dt {
+        width:20rem;
+        font-size:2.4rem;
+        padding-left:2.5rem;
+    }
+    .pc-schedule dl dt::before {
+        width:0.8rem;
+        height:0.8rem;
+        top:0.7rem;
+    }
+    .pc-schedule dl dd .total {
+        font-size:2.4rem;
+    }
+    .pc-schedule dl dd .row .place {
+        font-size:2rem;
+    }
+    .pc-schedule dl dd .date {
+        font-size:2rem;
+    }
+    .pc-schedule dl dd .date strong {
+        font-size:2.4rem;
+    }
+    .pc-schedule dl dd .row .stack-live div a {
+        font-size:1.6rem;
+    }
+}
+@media all and (max-width:580px) {
+    .pc-schedule dl {
+        flex-direction: column;
+    }
+    .pc-schedule dl dd {
+        padding-left:2.5rem;
+    }
+}
+@media all and (max-width:520px) {
+    .stit {
+        font-size:3rem;
+    }
+}
+
+
+
+/* 유투브 팝업 */
+.modal-content .modal-header {
+    margin-bottom:0;
+}
+
+#youtubeOpen .smov:after {
+    padding-top: 56.3%;
+}
+
+
+
+
+
+
+/* 공보물 */
+.pt-head {position:relative; padding:3rem 5rem;}
+.pt-head .logo img {width:13.4rem; height:auto;}
+.pt-head .category {
+    display:block;
+    position:absolute; top:3rem; right:5rem; 
+    font-size:0;
+    width:2.8rem;
+    height:2.8rem;
+    background:url("../img/partycon2024/category.svg") no-repeat center;
+    background-size:2.8rem auto;
+}
+.pt-head .logo {margin:0; padding:0;}
+.pt-head .slogan {
+    display:block;
+    position:absolute; top:2rem; right:10rem; 
+}
+.pt-head .slogan img {
+    width:7.2rem;
+    height:auto;
+}
+.pt-wrap {padding:0 5rem;}
+.pt-wrap .pt-tit {
+    margin-bottom:2rem;
+    font-size: 3rem;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.13;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000;
+    font-weight: 900;
+    padding-left:1.6rem;
+    background:url("../img/partycon2024/pt_tit_bar.png") no-repeat left center;
+}
+.pt-wrap .pt-total {
+    margin-top:2rem;
+    margin-bottom:2rem;
+    font-size: 2rem;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.9;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000;
+    font-weight: 800;
+}
+.pt-wrap .pt-total span {
+    color:#e60024;
+}
+.pt-list > ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    column-gap: 2%;
+}
+.pt-list > ul > li {
+    width:48%;
+    border-top:solid 1px #eee;
+    padding:5rem 0;
+}
+.pt-list .name {position:relative; margin-bottom:3rem; padding-left:6rem;}
+.pt-list .name .thumb {
+    position:absolute;
+    top:50%;
+    left:0;
+    transform:translateY(-50%);
+    width:5rem;
+    height:5rem;
+    padding: 1px;
+    background-image: linear-gradient(141deg, #e60024 14%, #112c56 85%);    
+    border-radius:50%;
+    overflow:hidden;    
+}
+.pt-list .name .thumb img {width:100%; height:100%; border-radius:50%;}
+.pt-list .name h4 {
+    margin:0;
+    padding:0;
+    font-size: 2.4rem;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000;
+    font-weight:900;
+}
+.pt-list .name p {
+    font-size: 1.3rem;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.69;
+    letter-spacing: normal;
+    text-align: left;
+    color: #757575;
+    font-weight:700;
+}
+.pt-list .name p br {display:none;}
+
+.pt-wrap .promotion-pic ul {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    column-gap:2%;
+}
+.pt-wrap .promotion-pic ul li {
+    width:23%;
+    padding:0.6rem;
+    background:#dcdcdc;
+    position:relative;
+}
+.pt-wrap .promotion-pic ul li img {
+    width:100%;
+}
+.pt-wrap .promotion-pic ul li:hover {
+    background:url("../img/partycon2024/photo_pmo_frame.png") no-repeat center;
+    background-size:cover;
+}
+.pt-wrap .promotion-pic ul li.on a:after,
+.pt-wrap .promotion-pic ul li:hover a:after {
+    display:block;
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    background:rgba(0, 0, 0, 0.2);
+    z-index:2;
+}
+.pt-wrap .promotion-pic ul li:hover a:before {
+    display:block;
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    background:url("../img/partycon2024/photo_1_pmo_view.png") no-repeat center;
+    z-index:3;
+}  
+
+aside#pt-aside {
+    background:#fff; position:fixed; top:0; left:100%; transition:all 0.3s; width:100%; height:100%; z-index:1001; overflow-y:auto; 
+} 
+aside#pt-aside .aside_conts {
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    height:100%;
+    position:relative; 
+    padding-top:22rem;
+    box-sizing:border-box;
+}
+aside#pt-aside .aside_conts .atop {
+    position: absolute; top:0; left:0; width:100%;
+}
+aside#pt-aside .aside_conts .atop h1 {position:absolute; top:3rem; left:3rem; font-size:0; margin:0;}
+aside#pt-aside .aside_conts .atop h1 img {width:13.4rem; height:auto;}
+aside#pt-aside .aside_conts .atop > .cate_close {
+    display:block; width:2rem; height:2rem; font-size:0;
+    position:absolute; top:3rem; right:3rem;
+    background:url("../img/partycon2024/as_close.png") no-repeat center;
+    background-size:contain;
+}
+aside#pt-aside .aside_conts .atop .slogon {
+    padding:10rem 3rem 30px; text-align:center; background:#fff;
+    font-size: 3rem;
+    font-weight: 900;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.1;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000;
+}
+aside#pt-aside .aside_conts .atop .slogon span {
+    display:inline-block;
+}
+aside#pt-aside .aside_conts .atop .slogon span.sl1 {
+    border-bottom:solid 1px #000;
+}
+aside#pt-aside .aside_conts .atop .slogon span.sl2 {
+    margin-top:1rem;
+    color: #e60024;
+    border-bottom:solid 1px #e60024;
+}
+
+aside#pt-aside .aside_conts .atop .line {left:0; right:0; height:5px;}
+
+aside#pt-aside .aside_conts > ul {
+    padding:0 3rem;
+}
+aside#pt-aside .aside_conts > ul > li {text-align:left;}
+aside#pt-aside .aside_conts > ul > li + li {margin-top:20px;}
+aside#pt-aside .aside_conts > ul > li > a {font-size:2rem; color:#000; font-weight:700;}
+aside#pt-aside .aside_conts > ul > li > p a {display:inline-block; padding-top:1rem; padding-bottom:1rem; font-size:1.6rem; color:#888;}
+
+/* 반응형 */
+@media all and (min-width:1201px) {
+
+}
+
+
+
+
+@media (max-width: 1200px) {
+    .pt-head {padding:2rem 2rem;}
+    .pt-head .category {top:2rem; right:2rem;}
+    .pt-head .slogan {
+         top:1rem; right:7rem; 
+    }
+    .pt-wrap {
+        padding: 0 2rem;
+    }
+    .pt-list > ul > li {
+        width:100%;
+    }
+}
+@media (max-width: 520px) {
+    .pt-wrap .pt-tit {font-size:2.6rem;}
+    .pt-list > ul > li {
+        width:48%;
+        padding:3rem 0;
+    }
+    .pt-list .name {margin-bottom:2rem;}
+    .pt-list .name p {display:none;}
+    .pt-list .name p br {display:block;}
+    .pt-wrap .promotion-pic ul li {width:100%;}
+    .pt-wrap .promotion-pic ul li:nth-child(2) {display:none;}
+    .pt-wrap .promotion-pic ul li:nth-child(3) {display:none;}
+    .pt-wrap .promotion-pic ul li:nth-child(4) {display:none;}
+}
+
+
+
+
+
+
+/* 투표안내 */
+.pc-vote {
+    background:url("../img/partycon2024/schedul-bg.png") repeat-x center top;
+    background-size:100%;
+    padding:0 4%;
+}
+.pc-vote .indiv {
+    max-width:160rem;
+    margin:auto;
+    background:#fff;
+    padding:5rem 4%;
+    -webkit-box-shadow: 2.5rem 2.5rem 4.6rem 0px rgba(0,0,0,0.09);
+    -moz-box-shadow: 2.5rem 2.5rem 4.6rem 0px rgba(0,0,0,0.09);
+    box-shadow: 2.5rem 2.5rem 4.6rem 0px rgba(0,0,0,0.09);
+}
+.pc-vote .img {text-align:center;}
+.pc-vote .img.for_mobile {display:none;}
+.pc-vote .img img {max-width:100%;}
+
+@media (max-width: 1350px) {
+    .pc-vote {
+        padding-top: 0;
+    }
+}
+@media (max-width: 800px) {
+    .pc-vote .img.for_mobile {display:block;}
+    .pc-vote .img.for_pc {display:none;}
+}
