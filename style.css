@@ -1,0 +1,211 @@
+
+ul, ol {
+    margin: 0;
+    padding: 0;
+}
+ol, ul {
+    list-style: none;
+}
+.logo img {
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 800;
+}
+
+h2 {
+    color: #cc0000;
+}
+
+.social-links a {
+    color: white;
+    margin: 0 5px;
+    text-decoration: none;
+}
+
+@media (max-width: 1200px) {
+    .msec1 .candi-list {
+        flex-wrap: wrap;
+    }
+}
+.msec1 .candi-list {
+    display: flex;
+}
+
+.msec1 .candi-list li:nth-child(1) {
+    background: url(https://www.peoplepowerparty.kr/assets/home/img/partycon2024/main-1-bg.png) no-repeat center;
+    background-size: cover;
+}
+@media (max-width: 1200px) {
+    .msec1 .candi-list li {
+        width: 50%;
+    }
+}
+.msec1 .candi-list li {
+    width: 25%;
+    position: relative;
+}
+.msec1 .candi-list li .top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 10% 6%;
+    z-index: 2;
+}
+
+@media (max-width: 520px) {
+    .msec1 .candi-list li .top span {
+        font-size: 1.8rem;
+    }
+}
+.msec1 .candi-list li .top span {
+    font-size: 2rem;
+    color: #000;
+    font-weight: 800;
+}
+
+.msec1 .candi-list li .top div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media (max-width: 520px) {
+    .msec1 .candi-list li .top div h4 {
+        font-size: 3.8rem;
+    }
+}
+.msec1 .candi-list li .top div h4 {
+    font-size: 4.8rem;
+    color: #000;
+    font-weight: 900;
+}
+
+.msec1 .candi-list li .top div em {
+    font-size: 2rem;
+    color: #000;
+    font-weight: 400;
+}
+
+.msec1 .candi-list li img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    z-index: 0;
+}
+img {
+    border-style: none;
+}
+img {
+    vertical-align: top;
+}
+
+.msec1 .candi-list li a {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 10% 6%;
+    z-index: 3;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(180deg, rgba(184, 37, 50, 0) 50%, rgba(46, 41, 79, 1) 100%, rgba(46, 41, 79, 1) 100%);
+}
+
+.msec1 .candi-list li a h5 {
+    margin-top: auto;
+    text-align: center;
+    font-size: 3.6rem;
+    color: #fff;
+    font-weight: 800;
+}
+
+.msec1 .candi-list li a .sns {
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.msec1 .candi-list li a .sns button.yu {
+    background: url(https://www.peoplepowerparty.kr/assets/home/img/partycon2024/sns-yu.png) no-repeat center;
+    background-size: contain;
+}
+.msec1 .candi-list li a .sns button {
+    position: relative;
+    font-size: 0;
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 100vh;
+    z-index: 4;
+}
+button, [type="button"], [type="reset"], [type="submit"] {
+    appearance: button;
+}
+button, [type="button"], [type="reset"], [type="submit"] {
+    -webkit-appearance: button;
+}
+button, select {
+    text-transform: none;
+}
+button, input {
+    overflow: visible;
+}
+
+.msec1 .candi-list li a .sns button.fa {
+    background: url(https://www.peoplepowerparty.kr/assets/home/img/partycon2024/sns-fa.png) no-repeat center;
+    background-size: contain;
+}
+.msec1 .candi-list li a .sns button {
+    position: relative;
+    font-size: 0;
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 100vh;
+    z-index: 4;
+}
+
+.msec1 .candi-list li a .sns button.in {
+    background: url(https://www.peoplepowerparty.kr/assets/home/img/partycon2024/sns-in.png) no-repeat center;
+    background-size: contain;
+}
+
+.msec1 .candi-list li:nth-child(2) {
+    background: url(https://www.peoplepowerparty.kr/assets/home/img/partycon2024/main-2-bg.png) no-repeat center;
+    background-size: cover;
+}
+
+.msec1 .candi-list li:nth-child(3) {
+    background: url(https://www.peoplepowerparty.kr/assets/home/img/partycon2024/main-3-bg.png) no-repeat center;
+    background-size: cover;
+}
+
+.msec1 .candi-list li:nth-child(4) {
+    background: url(https://www.peoplepowerparty.kr/assets/home/img/partycon2024/main-4-bg.png) no-repeat center;
+    background-size: cover;
+}
+
+@media (max-width: 520px) {
+    .msec1 .candi-list li .top span {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 450px) {
+    .msec1 .candi-list li .top span {
+        font-size: 1.6rem;
+    }
+}
