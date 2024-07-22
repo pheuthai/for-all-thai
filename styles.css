@@ -19,6 +19,13 @@ header {
     width: 100%;
 }
 
+ul, ol {
+    margin: 0;
+    padding: 0;
+}
+ol, ul {
+    list-style: none;
+}
 .logo img {
     height: 50px;
 }
