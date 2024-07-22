@@ -242,3 +242,14 @@ button, input {
         font-size: 1.6rem;
     }
 }
+
+@media (max-width: 450px) {
+    .msec1 .candi-list li .top div h4 {
+        font-size: 2.8rem;
+    }
+}
+@media (max-width: 520px) {
+    .msec1 .candi-list li .top div h4 {
+        font-size: 3.8rem;
+    }
+}
