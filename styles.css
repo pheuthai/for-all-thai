@@ -236,3 +236,9 @@ button, input {
         font-size: 1.8rem;
     }
 }
+
+@media (max-width: 450px) {
+    .msec1 .candi-list li .top span {
+        font-size: 1.6rem;
+    }
+}
