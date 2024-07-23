@@ -355,7 +355,7 @@ button, [type="button"], [type="reset"], [type="submit"] {
 /* menu เปิดปิด */
 
 
-@media (max-width: 600px) {
+@media (max-width: 720px) {
     .category {
         display: block !important;
     }
