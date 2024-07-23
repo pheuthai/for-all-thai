@@ -468,3 +468,11 @@ button {
     background: transparent;
     cursor: pointer;
 }
+@media (min-width: 1440px) {
+    aside#pc-aside .aside_conts .atop .slogon {
+        padding: 1rem 10rem 5rem;
+    }
+    aside#pc-aside .aside_conts > ul {
+        padding: 0 10rem;
+    }
+}
