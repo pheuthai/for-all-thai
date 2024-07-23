@@ -356,7 +356,7 @@ button, [type="button"], [type="reset"], [type="submit"] {
 
 @media (max-width: 600px) {
     .category {
-        display: block;
+        display: block !important;
     }
 }
 .category {
