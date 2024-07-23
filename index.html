@@ -153,3 +153,58 @@
     <script src="script.js"></script>
 </body>
 </html>
+<script>
+    $(document).ready(function() {
+        /* mobile menu */
+        $(".pc-header .category").click(function(){
+            $("body").addClass("body-fixed");
+            $("aside#pc-aside").css("left","0");
+            $(".category_mask").show();
+        });
+        $(".cate_close").click(function(){
+            $("body").removeClass("body-fixed");
+            $("aside#pc-aside").css("left","100%");
+            $(".category_mask").fadeOut();
+        });
+    });
+
+    /* 책갈피 이동 */
+    $(document).ready(function() {
+        $(".bookmark_scroll").click(function(event){
+            event.preventDefault();
+            var targetUrl = $(this).attr('href');
+            if (targetUrl.includes('#')) {
+                var parts = targetUrl.split('#');
+                var baseUrl = parts[0];
+                var hash = parts[1];
+                if (window.location.pathname === baseUrl) {
+                    var position = $('#' + hash).offset().top;
+                    $('html,body').animate({scrollTop:position}, 500);
+                } else {
+                    window.location.href = targetUrl;
+                }
+            }
+        });
+
+        // 페이지 로드 후 책갈피 이동
+        if (window.location.hash) {
+            var hash = window.location.hash;
+            var position = $(hash).offset().top;
+            $('html,body').animate({scrollTop:position}, 500);
+        }
+    });
+
+    // D-Day 계산
+    $(document).ready(function() {    
+        function calculateDday(targetDate) {
+            const now = new Date();
+            const target = new Date(targetDate);
+            target.setHours(0, 0, 0, 0); // 자정을 기준으로 설정
+            const diffTime = target - now;
+            const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+            return diffDays;
+        }
+        const dday = calculateDday('2024-07-23');
+        $('.dday span').text(`-${dday}`);
+    });
+</script>
