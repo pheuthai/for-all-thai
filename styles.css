@@ -354,8 +354,8 @@ button, [type="button"], [type="reset"], [type="submit"] {
 }
 /* menu เปิดปิด */
 
-@media (max-width: 1200px) {
-    .pc-header .category {
+@media (max-width: 600px) {
+    .category {
         display: block;
     }
 }
