@@ -323,7 +323,7 @@ button, [type="button"], [type="reset"], [type="submit"] {
     margin-right: 0;
 }
 
-@media (min-width: 900px) {
+@media (max-width: 900px) {
     section.pc-container.candidates {
         padding: 50px 5%;
         background: url(https://www.peoplepowerparty.kr/assets/home/img/partycon2024/schedul-bg.png) center top repeat-x;
