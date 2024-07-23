@@ -102,11 +102,9 @@ ul li a:hover {
 }
 
 section.pc-container.candidates {
-    padding: 50px 120px;
+    padding: 50px 20%;
     background: url(https://www.peoplepowerparty.kr/assets/home/img/partycon2024/schedul-bg.png) repeat-x center top;
 }
-
-
 
 @keyframes marquee {
     0% { transform: translateX(100%); }
