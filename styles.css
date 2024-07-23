@@ -85,7 +85,12 @@ ul li a:hover {
 }
 .marquee-content {
     display: inline-block;
-    animation: marquee 15s linear infinite;
+    animation: marquee 20s linear infinite;
+}
+
+@keyframes marquee {
+    0% { transform: translateX(200%); }
+    100% { transform: translateX(-100%); }
 }
 
 .marquee p {
@@ -106,11 +111,6 @@ ul li a:hover {
 section.pc-container.candidates {
     padding: 50px 20%;
     background: url(https://www.peoplepowerparty.kr/assets/home/img/partycon2024/schedul-bg.png) repeat-x center top;
-}
-
-@keyframes marquee {
-    0% { transform: translateX(100%); }
-    100% { transform: translateX(-100%); }
 }
 
 /* ส่วนท้าย */
