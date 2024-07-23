@@ -49,6 +49,15 @@ header {
     margin-right: 20px;
 }
 
+header ul {
+    display: flex;
+}
+
+
+header ul li {
+    margin-left: 20px;
+}
+
 /* ผู้สมัคร */
 .candidates {
     display: flex;
