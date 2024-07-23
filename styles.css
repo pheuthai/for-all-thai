@@ -62,8 +62,12 @@ header ul li {
 
 ul li a {
     text-decoration: none;
-    color: #ff0000;
+    color: #000;
     font-weight: 600;
+}
+
+ul li a:hover {
+    color: #000;
 }
 /* ข้อความเลื่อน */
 .marquee {
@@ -198,3 +202,70 @@ ol, ul {
     z-index: 0;
 }
 
+
+.msec1 .candi-list li a {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 10% 6%;
+    z-index: 3;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(180deg, rgba(184, 37, 50, 0) 50%, rgba(46, 41, 79, 1) 100%, rgba(46, 41, 79, 1) 100%);
+}
+
+.msec1 .candi-list li a::after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 0.4rem solid #b82532;
+    z-index: 2;
+}
+
+.msec1 .candi-list li:hover a {
+    display: flex;
+}
+.msec1 .candi-list li a {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 10% 6%;
+    z-index: 3;
+    /* background: rgb(255, 255, 255); */
+    background: linear-gradient(180deg, rgba(184, 37, 50, 0) 50%, rgba(46, 41, 79, 1) 100%, rgba(46, 41, 79, 1) 100%);
+}
+
+a {
+    background-color: transparent;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.msec1 .candi-list li a h5 {
+    margin-top: auto;
+    text-align: center;
+    font-size: 1.8rem;
+    color: #fff;
+    font-weight: 800;
+}
+
+.msec1 .candi-list li a .sns {
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+}
