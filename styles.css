@@ -437,6 +437,7 @@ aside#pc-aside .aside_conts > ul {
 aside#pc-aside .aside_conts > ul > li {
     text-align: left;
     margin-right: 10px;
+    width: 20%;
 }
 
 aside#pc-aside .aside_conts > ul > li > a {
