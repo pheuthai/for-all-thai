@@ -354,11 +354,18 @@ button, [type="button"], [type="reset"], [type="submit"] {
 }
 /* menu เปิดปิด */
 
+aside#pc-aside{
+    display: none;
+}
+
 @media (max-width: 600px) {
     .category {
         display: block !important;
     }
     nav.nav{
+        display: none;
+    }
+    aside#pc-aside{
         display: none;
     }
 }
