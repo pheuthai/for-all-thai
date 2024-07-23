@@ -119,6 +119,9 @@ footer {
     color: white;
     text-align: center;
     padding: 1rem 0;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
 }
 
 .header.shadow {
@@ -327,5 +330,23 @@ button, [type="button"], [type="reset"], [type="submit"] {
     section.pc-container.candidates {
         padding: 50px 5%;
         background: url(https://www.peoplepowerparty.kr/assets/home/img/partycon2024/schedul-bg.png) center top repeat-x;
+    }
+}
+
+@media (max-width: 540px) {
+    section.pc-container.candidates {
+        padding: 0;
+        background: url(https://www.peoplepowerparty.kr/assets/home/img/partycon2024/schedul-bg.png) center top repeat-x;
+    }
+    .marquee {
+        margin: -10px 0 -50px 0;
+    }
+    .marquee-content {
+        display: inline-block;
+        animation: marquee 10s linear infinite;
+    }
+    @keyframes marquee {
+        0% { transform: translateX(100%); }
+        100% { transform: translateX(-100%); }
     }
 }
