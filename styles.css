@@ -264,7 +264,7 @@ a {
 .msec1 .candi-list li a h5 {
     margin-top: auto;
     text-align: center;
-    font-size: 1.8rem;
+    font-size: 1.2rem;
     color: #fff;
     font-weight: 800;
 }
@@ -275,4 +275,39 @@ a {
     align-items: center;
     justify-content: center;
     gap: .5rem;
+}
+
+.msec1 .candi-list li a .sns button.yu {
+    background: url(https://www.peoplepowerparty.kr/assets/home/img/partycon2024/sns-yu.png) no-repeat center;
+    background-size: contain;
+}
+
+.msec1 .candi-list li a .sns button.fa {
+    background: url(https://www.peoplepowerparty.kr/assets/home/img/partycon2024/sns-fa.png) no-repeat center;
+    background-size: contain;
+}
+
+.msec1 .candi-list li a .sns button.bl {
+    background: url(https://www.peoplepowerparty.kr/assets/home/img/partycon2024/sns-bl.png) no-repeat center;
+    background-size: contain;
+}
+
+.msec1 .candi-list li a .sns button.in {
+    background: url(https://www.peoplepowerparty.kr/assets/home/img/partycon2024/sns-in.png) no-repeat center;
+    background-size: contain;
+}
+
+
+.msec1 .candi-list li a .sns button {
+    position: relative;
+    font-size: 0;
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 100vh;
+    z-index: 4;
+}
+
+<style>
+button, [type="button"], [type="reset"], [type="submit"] {
+    appearance: button;
 }
