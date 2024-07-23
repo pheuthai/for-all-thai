@@ -155,3 +155,43 @@ ol, ul {
     width: 33.33%;
     position: relative;
 }
+
+.msec1 .candi-list li .top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 10% 6%;
+    z-index: 2;
+}
+
+.msec1 .candi-list li .top span {
+    font-size: 1rem;
+    color: #000;
+    font-weight: 800;
+}
+
+.msec1 .candi-list li .top div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.msec1 .candi-list li .top div h4 {
+    font-size: 2.4rem;
+    color: #000;
+    font-weight: 900;
+}
+
+.msec1 .candi-list li .top div em {
+    font-size: 1rem;
+    color: #000;
+    font-weight: 400;
+}
+
+.msec1 .candi-list li img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    z-index: 0;
+}
