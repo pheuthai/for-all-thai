@@ -317,8 +317,8 @@ button, [type="button"], [type="reset"], [type="submit"] {
     display: inline-block;
     content: "";
     width: 1.8rem;
-    height: 2rem;
+    height: .7rem;
     background: url(https://www.peoplepowerparty.kr/assets/home/img/partycon2024/tag_bar.png) no-repeat center;
     background-size: contain;
-    margin-right: 2rem;
+    margin-right: 0;
 }
