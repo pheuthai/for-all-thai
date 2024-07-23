@@ -72,15 +72,17 @@ ul li a:hover {
 /* ข้อความเลื่อน */
 
 .marquee {
-    background-color: #eb0000;
     color: white;
     overflow: hidden;
     white-space: nowrap;
-    padding: 1rem 0;
     position: relative;
     margin: 20px -35% -50px -35%;
 }
 
+.tag {
+    background: #d31421;
+    padding: 1.5rem 0;
+}
 .marquee-content {
     display: inline-block;
     animation: marquee 15s linear infinite;
@@ -307,7 +309,16 @@ a {
     z-index: 4;
 }
 
-<style>
 button, [type="button"], [type="reset"], [type="submit"] {
     appearance: button;
+}
+
+.marquee-content span::after {
+    display: inline-block;
+    content: "";
+    width: 1.8rem;
+    height: 2rem;
+    background: url(https://www.peoplepowerparty.kr/assets/home/img/partycon2024/tag_bar.png) no-repeat center;
+    background-size: contain;
+    margin-right: 2rem;
 }
