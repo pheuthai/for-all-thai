@@ -1,12 +1,8 @@
-document.querySelectorAll('nav ul li a').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href').substring(1);
-        const targetSection = document.getElementById(targetId);
-
-        window.scrollTo({
-            top: targetSection.offsetTop,
-            behavior: 'smooth'
-        });
+// script.js
+document.addEventListener("DOMContentLoaded", function() {
+    // ลบหน้าจอโหลดเมื่อหน้าโหลดเสร็จ
+    const preloader = document.getElementById('preloader');
+    window.addEventListener('load', function() {
+        preloader.style.display = 'none';
     });
 });
