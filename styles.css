@@ -455,3 +455,9 @@ aside#pc-aside .aside_conts .atop h1 {
     margin: 0;
 }
 /* menu เปิดปิด */
+
+button {
+    border: 0 none;
+    background: transparent;
+    cursor: pointer;
+}
