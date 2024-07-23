@@ -116,80 +116,31 @@ footer {
 
 
 /* Candidate List Style */
-.candidates {
-    padding: 2rem;
-    background-color: #f9f9f9;
-}
 
-.candi-list {
+.msec1 .candi-list {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
 }
-
-.candi-list li {
-    width: 23%;
-    background-color: #fff;
-    margin-bottom: 2rem;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-}
-
-.candi-list li:hover {
-    transform: translateY(-10px);
-}
-
-.candi-list .top {
-    background-color: #eb0000;
-    color: #fff;
-    padding: 0.5rem 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.candi-list .top span {
-    font-size: 1rem;
-}
-
-.candi-list .top h4 {
+ul, ol {
     margin: 0;
+    padding: 0;
 }
 
-.candi-list img {
-    width: 100%;
-    height: auto;
-    display: block;
+ol, ul {
+    list-style: none;
 }
 
-.candi-list a {
-    text-decoration: none;
-    color: inherit;
-    padding: 1rem;
-    display: block;
-    text-align: center;
+
+.msec1 .candi-list li:nth-child(1) {
+    background: url(https://www.peoplepowerparty.kr/assets/home/img/partycon2024/main-1-bg.png) no-repeat center;
+    background-size: cover;
+}
+@media (max-width: 1200px) {
+    .msec1 .candi-list li {
+        width: 50%;
+    }
 }
 
-.candi-list h5 {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-}
-
-.sns {
-    display: flex;
-    justify-content: center;
-}
-
-.sns button {
-    background-color: #eb0000;
-    color: #fff;
-    border: none;
-    padding: 0.5rem 1rem;
-    margin: 0 0.2rem;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.sns button:hover {
-    background-color: #c40000;
+.msec1 .candi-list li {
+    width: 25%;
+    position: relative;
 }
