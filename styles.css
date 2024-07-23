@@ -358,6 +358,9 @@ button, [type="button"], [type="reset"], [type="submit"] {
     .category {
         display: block !important;
     }
+    nav.nav{
+        display: none;
+    }
 }
 .category {
     font-size: 0;
