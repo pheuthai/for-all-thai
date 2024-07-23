@@ -70,6 +70,7 @@ ul li a:hover {
     color: #000;
 }
 /* ข้อความเลื่อน */
+
 .marquee {
     background-color: #eb0000;
     color: white;
@@ -77,6 +78,7 @@ ul li a:hover {
     white-space: nowrap;
     padding: 1rem 0;
     position: relative;
+    margin: 20px -120px -50px -120px;
 }
 
 .marquee-content {
@@ -98,6 +100,13 @@ ul li a:hover {
     background-size: contain;
     margin-right: 2rem;
 }
+
+section.pc-container.candidates {
+    padding: 50px 120px;
+    background: url(https://www.peoplepowerparty.kr/assets/home/img/partycon2024/schedul-bg.png) repeat-x center top;
+}
+
+
 
 @keyframes marquee {
     0% { transform: translateX(100%); }
