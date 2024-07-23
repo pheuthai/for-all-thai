@@ -391,10 +391,10 @@ aside#pc-aside .aside_conts .atop > .cate_close {
 }
 
 aside#pc-aside .aside_conts .atop .slogon {
-    padding: 10rem 3rem 30px;
+    padding: 3rem 3rem 30px;
     text-align: center;
     background: #000;
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 900;
     font-stretch: normal;
     font-style: normal;
@@ -431,14 +431,16 @@ aside#pc-aside .aside_conts .atop .line {
 
 aside#pc-aside .aside_conts > ul {
     padding: 0 3rem;
+    display: flex;
 }
 
 aside#pc-aside .aside_conts > ul > li {
     text-align: left;
+    margin-left: 10px;
 }
 
 aside#pc-aside .aside_conts > ul > li > a {
-    font-size: 2rem;
+    font-size: 1rem;
     color: #fff;
     font-weight: 700;
 }
@@ -447,7 +449,7 @@ aside#pc-aside .aside_conts > ul > li > p a {
     display: inline-block;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    font-size: 1.6rem;
+    font-size: .8rem;
     color: #dadada;
 }
 
