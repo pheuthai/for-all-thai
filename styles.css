@@ -35,11 +35,18 @@ body {
 }
 
 /* ส่วนหัว */
+
+
 header {
-    background-color: #ff0000;
+    background-color: #ffff;
     color: white;
     text-align: center;
     padding: 1rem 0;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 /* ผู้สมัคร */
