@@ -359,14 +359,14 @@ button, [type="button"], [type="reset"], [type="submit"] {
         display: block;
     }
 }
-.pc-header .category {
+.category {
     font-size: 0;
     width: 2.8rem;
     height: 2.8rem;
     background: url(https://www.peoplepowerparty.kr/assets/home/img/partycon2024/category.svg) no-repeat center;
     background-size: 2.8rem auto;
 }
-.pc-header .category {
+.category {
     display: none;
 }
 
