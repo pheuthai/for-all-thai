@@ -354,9 +354,6 @@ button, [type="button"], [type="reset"], [type="submit"] {
 }
 /* menu เปิดปิด */
 
-aside#pc-aside{
-    display: none;
-}
 
 @media (max-width: 600px) {
     .category {
@@ -364,9 +361,6 @@ aside#pc-aside{
     }
     nav.nav{
         display: none;
-    }
-    aside#pc-aside{
-        display: unset;
     }
 }
 .category {
@@ -399,7 +393,7 @@ aside#pc-aside .aside_conts .atop > .cate_close {
 aside#pc-aside .aside_conts .atop .slogon {
     padding: 10rem 3rem 30px;
     text-align: center;
-    background: #fff;
+    background: #000;
     font-size: 3rem;
     font-weight: 900;
     font-stretch: normal;
@@ -407,11 +401,11 @@ aside#pc-aside .aside_conts .atop .slogon {
     line-height: 1.1;
     letter-spacing: normal;
     text-align: left;
-    color: #000;
+    color: #fff;
 }
 
 aside#pc-aside .aside_conts .atop .slogon span.sl1 {
-    border-bottom: solid 1px #000;
+    border-bottom: solid 1px #fff;
 }
 aside#pc-aside .aside_conts .atop .slogon span {
     display: inline-block;
