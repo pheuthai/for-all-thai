@@ -134,6 +134,17 @@ ol, ul {
     background: url(https://www.peoplepowerparty.kr/assets/home/img/partycon2024/main-1-bg.png) no-repeat center;
     background-size: cover;
 }
+
+.msec1 .candi-list li:nth-child(2) {
+    background: url(https://www.peoplepowerparty.kr/assets/home/img/partycon2024/main-2-bg.png) no-repeat center;
+    background-size: cover;
+}
+
+.msec1 .candi-list li:nth-child(3) {
+    background: url(https://www.peoplepowerparty.kr/assets/home/img/partycon2024/main-3-bg.png) no-repeat center;
+    background-size: cover;
+}
+
 @media (max-width: 1200px) {
     .msec1 .candi-list li {
         width: 50%;
