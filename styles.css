@@ -391,7 +391,7 @@ aside#pc-aside .aside_conts .atop > .cate_close {
 }
 
 aside#pc-aside .aside_conts .atop .slogon {
-    padding: 3rem 3rem 30px;
+    padding: 1rem 3rem 2rem;
     text-align: center;
     background: #000;
     font-size: 2rem;
@@ -436,7 +436,7 @@ aside#pc-aside .aside_conts > ul {
 
 aside#pc-aside .aside_conts > ul > li {
     text-align: left;
-    margin-left: 10px;
+    margin-right: 10px;
 }
 
 aside#pc-aside .aside_conts > ul > li > a {
