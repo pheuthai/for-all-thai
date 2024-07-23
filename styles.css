@@ -366,7 +366,7 @@ aside#pc-aside{
         display: none;
     }
     aside#pc-aside{
-        display: none;
+        display: unset;
     }
 }
 .category {
