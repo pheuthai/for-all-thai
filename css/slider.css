@@ -20,3 +20,20 @@
         .slide.active {
             opacity: 1;
         }
+
+.slide {
+    object-fit: contain;
+}
+/* Responsive Slider Heights */
+        @media (min-width: 991px) {
+            .slider { height: 233.33px; }
+        }
+        @media (min-width: 768px) and (max-width: 990px) {
+            .slider { height: 203px; }
+        }
+        @media (max-width: 767px) {
+            .slider { height: 150.5px; }
+        }
+        @media (max-width: 379px) {
+            .slider { height: 103.83px; }
+        }
