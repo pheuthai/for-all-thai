@@ -23,6 +23,7 @@
 
 .slide {
     object-fit: contain;
+    border-radius: 10px;
 }
 /* Responsive Slider Heights */
         @media (min-width: 991px) {
