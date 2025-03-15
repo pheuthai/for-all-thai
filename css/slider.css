@@ -5,12 +5,11 @@
             max-width: 800px;
             margin: 20px auto;
             overflow: hidden;
-                        height:203px;
+            height:203px;
         }
         .slides {
             position: relative;
             width: 100%;
-                
         }
         .slide {
             position: absolute;
