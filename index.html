@@ -61,6 +61,115 @@
             align-items: unset;
         }
     </style>
+    <style>
+                
+                h1, h2, h3, h4, h5, h6, p {
+                    margin: 0;
+                    margin-bottom: 1em;
+                }
+                
+                .boxes {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    gap: 10px;
+                }
+        
+                .box{
+                    width: calc(33.333333% - 20px);
+                    padding: 20px;
+                    border: 1px solid #000;
+                    border-radius: 10px;
+                    color: #000;
+                    background: #fff;
+                }
+                .box img{
+                    width: 100%;
+                    border-radius: 10px;
+                }
+                    
+                .categories {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 0 10px;
+                }
+                
+                .categories p {
+                    background: #b1ffb5;
+                    padding: 4px 8px;
+                    border-radius: 50px;
+                }
+                
+                .box h2 {
+                    font-size: 16px;
+                }
+                
+                @media (max-width: 768px) {
+                    .categories p {
+                        font-size: 10px!important;
+                    }
+        
+                    h1, h2, h3, h4, h5, h6, p {
+                        margin: 0;
+                        margin-bottom: .5em!important;
+                    }
+        
+                    .box > p {
+                        font-size: 12px!important;
+                    }
+                }
+                @media (max-width: 600px) {
+                    .box {
+                        width: 100%!important;
+                    }
+        
+                    .categories p {
+                        font-size: 10px!important;
+                    }
+        
+                    h1, h2, h3, h4, h5, h6, p {
+                        margin: 0;
+                        margin-bottom: .5em!important;
+                    }
+        
+                    .box > p {
+                        font-size: 12px!important;
+                    }
+                }
+                @media (max-width: 900px) {
+                    .box {
+                        width: calc(50% - 10px);
+                    }
+                    .categories p {
+                        font-size: 10px!important;
+                    }
+        
+                    h1, h2, h3, h4, h5, h6, p {
+                        margin: 0;
+                        margin-bottom: .5em!important;
+                    }
+        
+                    .box > p {
+                        font-size: 12px!important;
+                    }
+                }
+                @media (max-width: 1200px) {
+        
+                    .categories p {
+                        font-size: 14px;
+                    }
+        
+                    h1, h2, h3, h4, h5, h6, p {
+                        margin: 0;
+                        margin-bottom: .5em;
+                    }
+        
+                    .box > p {
+                        font-size: 16px;
+                    }
+                }
+        
+            </style>
     <link rel="stylesheet" href="/css/slider.css">
 </head>
 <body>
@@ -92,8 +201,42 @@
             </div>
         </div>
         
-        <h1 class="text-center">รัฐบาลพรรคเพื่อไทย</h1>
-        <p class="text-center">ขับเคลื่อนประเทศไทยสู่อนาคตที่มั่นคงและยั่งยืน</p>
+        <div style="margin: 20px 0;">
+            <h1 class="text-center">รัฐบาลพรรคเพื่อไทย</h1>
+            <p class="text-center">ขับเคลื่อนประเทศไทยสู่อนาคตที่มั่นคงและยั่งยืน</p>
+        </div>
+        <div class="boxes">
+            <div class="box">
+                <img src="https://www.ptp.or.th/wp-content/uploads/2025/03/20250314_1_DP2_%E0%B8%99%E0%B8%B2%E0%B8%A2%E0%B8%81%E0%B8%AF%E0%B8%9E%E0%B8%B9%E0%B8%94%E0%B9%80%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%A2%E0%B8%B2%E0%B9%80%E0%B8%AA%E0%B8%9E%E0%B8%95%E0%B8%B4%E0%B8%94-100-1229x1536.jpg" alt="">
+                <h2>หัวข้อ</h2>
+                <div class="categories">
+                    <p>ยาเสพติด</p>
+                    <p>สาธารณสุข</p>
+                    <p>กำลังดำเนินการ</p>
+                </div>
+                <p>รายละเอียด</p>
+            </div>
+            
+            <div class="box">
+                <img src="https://www.ptp.or.th/wp-content/uploads/2025/03/20250314_1_DP2_%E0%B8%99%E0%B8%B2%E0%B8%A2%E0%B8%81%E0%B8%AF%E0%B8%9E%E0%B8%B9%E0%B8%94%E0%B9%80%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%A2%E0%B8%B2%E0%B9%80%E0%B8%AA%E0%B8%9E%E0%B8%95%E0%B8%B4%E0%B8%94-100-1229x1536.jpg" alt="">
+                <h2>หัวข้อ</h2>
+                <div class="categories">
+                    <p>ยาเสพติด</p>
+                    <p>สาธารณสุข</p>
+                    <p>กำลังดำเนินการ</p>
+                </div>
+                <p>รายละเอียด</p>
+            </div><div class="box">
+                <img src="https://www.ptp.or.th/wp-content/uploads/2025/03/20250314_1_DP2_%E0%B8%99%E0%B8%B2%E0%B8%A2%E0%B8%81%E0%B8%AF%E0%B8%9E%E0%B8%B9%E0%B8%94%E0%B9%80%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%A2%E0%B8%B2%E0%B9%80%E0%B8%AA%E0%B8%9E%E0%B8%95%E0%B8%B4%E0%B8%94-100-1229x1536.jpg" alt="">
+                <h2>หัวข้อ</h2>
+                <div class="categories">
+                    <p>ยาเสพติด</p>
+                    <p>สาธารณสุข</p>
+                    <p>กำลังดำเนินการ</p>
+                </div>
+                <p>รายละเอียด</p>
+            </div>
+        </div>
     </main>
     
     <footer class="footer">
