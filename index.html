@@ -62,19 +62,6 @@
         }
     </style>
     <link rel="stylesheet" href="/css/slider.css">
-    
-    <script>
-        let slides = document.querySelectorAll('.slide');
-        let index = 0;
-        
-        function showSlide() {
-            slides.forEach(slide => slide.classList.remove('active'));
-            slides[index].classList.add('active');
-            index = (index + 1) % slides.length;
-        }
-        
-        setInterval(showSlide, 3000);
-    </script>
 </head>
 <body>
     <header class="header">
@@ -601,5 +588,18 @@
                 }
             </style>
     
+    
+    <script>
+        let slides = document.querySelectorAll('.slide');
+        let index = 0;
+        
+        function showSlide() {
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[index].classList.add('active');
+            index = (index + 1) % slides.length;
+        }
+        
+        setInterval(showSlide, 3000);
+    </script>
 </body>
 </html>
