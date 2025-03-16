@@ -559,10 +559,17 @@
         document.addEventListener("DOMContentLoaded", async function () {
         const apiUrl = "https://script.google.com/macros/s/AKfycbz9HCZ6DfGHLBimJrdoQ2qI6JZmLS7t81FpUk-KPyRUFpq5Tgc7hpA_TOV7SBx5lPM/exec";
         const container = document.querySelector(".boxes");
+        const mainContainer = document.querySelector("main");
+        
+        const loadMoreContainer = document.createElement("div");
+        loadMoreContainer.classList.add("load-more-container");
+        
         const loadMoreBtn = document.createElement("button");
         loadMoreBtn.textContent = "ดูเพิ่มเติม";
         loadMoreBtn.classList.add("load-more");
-        document.body.appendChild(loadMoreBtn);
+        
+        loadMoreContainer.appendChild(loadMoreBtn);
+        mainContainer.appendChild(loadMoreContainer);
         
         let allData = [];
         let currentIndex = 0;
@@ -605,8 +612,6 @@
         
         loadMoreBtn.addEventListener("click", loadMoreData);
     });
-
-
     </script>
 </body>
 </html>
