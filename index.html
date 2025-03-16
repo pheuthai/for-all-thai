@@ -47,6 +47,10 @@
         </div>
         <div class="boxes">
         </div>
+        <div class="load-more-container">
+            <button id="loadMore" class="load-more">ดูเพิ่มเติม</button>
+        </div>
+
     </main>
     
     <footer class="footer">
@@ -558,15 +562,26 @@
         document.addEventListener("DOMContentLoaded", async function () {
         const apiUrl = "https://script.google.com/macros/s/AKfycbz9HCZ6DfGHLBimJrdoQ2qI6JZmLS7t81FpUk-KPyRUFpq5Tgc7hpA_TOV7SBx5lPM/exec";
         const container = document.querySelector(".boxes");
-    
+        const loadMoreBtn = document.createElement("button");
+        loadMoreBtn.textContent = "ดูเพิ่มเติม";
+        loadMoreBtn.classList.add("load-more");
+        document.body.appendChild(loadMoreBtn);
+        
+        let allData = [];
+        let currentIndex = 0;
+        const itemsPerPage = 12;
+        
         try {
             const response = await fetch(apiUrl);
-            const data = await response.json();
-            
-            // จำกัดข้อมูลให้เหลือเพียง 12 รายการแรก
-            const limitedData = data.slice(0, 12);
-            
-            limitedData.forEach(item => {
+            allData = await response.json();
+            loadMoreData();
+        } catch (error) {
+            console.error("Error fetching data:", error);
+        }
+        
+        function loadMoreData() {
+            const nextItems = allData.slice(currentIndex, currentIndex + itemsPerPage);
+            nextItems.forEach(item => {
                 const box = document.createElement("div");
                 box.classList.add("box");
                 
@@ -583,10 +598,17 @@
                 
                 container.appendChild(box);
             });
-        } catch (error) {
-            console.error("Error fetching data:", error);
+            
+            currentIndex += itemsPerPage;
+            
+            if (currentIndex >= allData.length) {
+                loadMoreBtn.style.display = "none";
+            }
         }
+        
+        loadMoreBtn.addEventListener("click", loadMoreData);
     });
+
 
     </script>
 </body>
