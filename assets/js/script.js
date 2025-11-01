@@ -16,17 +16,6 @@ const headerHTML = `
   </div>
 `;
 
-// HTML ของเมนูมือถือ (ถ้ามี)
-const mobileMenuHTML = `
-  <div class="mobile-menu">
-      <ul>
-          <li><a href="#">หน้าแรก</a></li>
-          <li><a href="#">นโยบาย</a></li>
-          <li><a href="#">ข่าวสาร</a></li>
-          <li><a href="#">ติดต่อ</a></li>
-      </ul>
-  </div>
-`;
 
 // เมื่อโหลดหน้าเสร็จให้แทรก HTML ทันที
 window.addEventListener("DOMContentLoaded", () => {
