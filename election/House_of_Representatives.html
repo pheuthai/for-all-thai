@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แนะนำผู้สมัครสมาชิกสภาผู้แทนราษฎร - พรรคเพื่อไทย</title>
+    <style>
+        :root {
+            --primary-color: #d9000d;
+            --white: #ffffff;
+            --light-gray: #f5f5f5;
+            --dark-gray: #333333;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Sarabun', 'Kanit', sans-serif;
+        }
+        
+        body {
+            background-color: var(--white);
+            color: var(--dark-gray);
+            line-height: 1.6;
+        }
+        
+        header {
+            background-color: var(--white);
+            color: var(--white);
+            padding: 1rem 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .logo-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+        
+        .logo {
+            height: 60px;
+        }
+        
+        .header-text {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        .filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background-color: var(--light-gray);
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        .search-box, .province-select {
+            flex: 1;
+            min-width: 250px;
+        }
+        
+        input, select {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        
+        .candidates-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .candidate-card {
+            background-color: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .candidate-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .candidate-image {
+            width: 100%;
+            height: 250px;
+            background-color: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 0.9rem;
+        }
+        
+        .candidate-info {
+            padding: 1.2rem;
+        }
+        
+        .candidate-name {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+        
+        .candidate-location {
+            color: #666;
+            font-size: 0.95rem;
+        }
+        
+        .party-badge {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-top: 0.5rem;
+        }
+        
+        .no-results {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 2rem;
+            color: #666;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 2rem;
+            font-size: 1.2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .candidates-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+            
+            .header-text {
+                font-size: 1.2rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .candidates-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .filters {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="https://for-all-thais.pages.dev/img/logo.gif" alt="พรรคเพื่อไทย" class="logo">
+            <div class="header-text">แนะนำผู้สมัครสมาชิกสภาผู้แทนราษฎร</div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="filters">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="ค้นหาชื่อผู้สมัคร นามสกุล หรือเขต/จังหวัด">
+            </div>
+            <div class="province-select">
+                <select id="provinceSelect">
+                    <option value="">เลือกจังหวัดทั้งหมด</option>
+                </select>
+            </div>
+        </div>
+        
+        <div id="candidatesContainer" class="candidates-grid">
+            <div class="loading">กำลังโหลดข้อมูลผู้สมัคร...</div>
+        </div>
+    </div>
+
+    <script>
+        // ตัวแปรเก็บข้อมูลผู้สมัครทั้งหมด
+        let allCandidates = [];
+        
+        // ดึงข้อมูลจาก API
+        async function fetchCandidates() {
+            try {
+                const response = await fetch('https://script.google.com/macros/s/AKfycbxphyMxHMCFoQc_cXj0Q7eXPgTDLs7QMrFbFPFkeeiI0MbtUUvly1wk5YZz33vPKzPm/exec');
+                const data = await response.json();
+                allCandidates = data;
+                displayCandidates(allCandidates);
+                populateProvinceSelect(allCandidates);
+            } catch (error) {
+                console.error('Error fetching candidates:', error);
+                document.getElementById('candidatesContainer').innerHTML = 
+                    '<div class="no-results">เกิดข้อผิดพลาดในการโหลดข้อมูลผู้สมัคร</div>';
+            }
+        }
+        
+        // แสดงข้อมูลผู้สมัคร
+        function displayCandidates(candidates) {
+            const container = document.getElementById('candidatesContainer');
+            
+            if (candidates.length === 0) {
+                container.innerHTML = '<div class="no-results">ไม่พบผู้สมัครที่ตรงกับการค้นหา</div>';
+                return;
+            }
+            
+            container.innerHTML = candidates.map(candidate => `
+                <div class="candidate-card">
+                    <div class="candidate-image">
+                        ${candidate.img ? 
+                            `<img src="${candidate.img}" alt="${candidate.name}" style="width:100%;height:100%;object-fit:cover;">` : 
+                            'ไม่มีรูปภาพ'
+                        }
+                    </div>
+                    <div class="candidate-info">
+                        <div class="candidate-name">${candidate.name}</div>
+                        <div class="candidate-location">จังหวัด${candidate.province} เขต ${candidate.zone}</div>
+                        <div class="party-badge">พรรคเพื่อไทย</div>
+                    </div>
+                </div>
+            `).join('');
+        }
+        
+        // เพิ่มตัวเลือกจังหวัดใน dropdown
+        function populateProvinceSelect(candidates) {
+            const provinceSelect = document.getElementById('provinceSelect');
+            const provinces = [...new Set(candidates.map(candidate => candidate.province))].sort();
+            
+            provinces.forEach(province => {
+                const option = document.createElement('option');
+                option.value = province;
+                option.textContent = province;
+                provinceSelect.appendChild(option);
+            });
+        }
+        
+        // ฟังก์ชันค้นหาและกรอง
+        function filterCandidates() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            const selectedProvince = document.getElementById('provinceSelect').value;
+            
+            const filteredCandidates = allCandidates.filter(candidate => {
+                const matchesSearch = candidate.name.toLowerCase().includes(searchTerm) || 
+                                     candidate.province.toLowerCase().includes(searchTerm) ||
+                                     candidate.zone.includes(searchTerm);
+                
+                const matchesProvince = !selectedProvince || candidate.province === selectedProvince;
+                
+                return matchesSearch && matchesProvince;
+            });
+            
+            displayCandidates(filteredCandidates);
+        }
+        
+        // ตั้งค่า event listeners
+        document.getElementById('searchInput').addEventListener('input', filterCandidates);
+        document.getElementById('provinceSelect').addEventListener('change', filterCandidates);
+        
+        // โหลดข้อมูลเมื่อหน้าเว็บโหลดเสร็จ
+        document.addEventListener('DOMContentLoaded', fetchCandidates);
+    </script>
+</body>
+</html>
